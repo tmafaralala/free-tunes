@@ -9,8 +9,8 @@ import UIKit
 
 class AlbumCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var albumTitle: UILabel!
     @IBOutlet weak var albumCover: UIImageView!
+    @IBOutlet weak var albumTitle: UILabel!
     
     func designCell() {
         albumCover.layer.cornerRadius = 13.0

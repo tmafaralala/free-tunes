@@ -10,9 +10,8 @@ import UIKit
 let authManager = AuthController()
 
 class ExploreViewController: UIViewController {
-
-    @IBOutlet weak var albumRecommendationsCollectionView: UICollectionView!
     
+    @IBOutlet weak var albumRecommendationsCollectionView: UICollectionView!
     private lazy var exploreViewModel = ExploreViewModel(exploreDelegate: self)
     
     override func viewDidLoad() {

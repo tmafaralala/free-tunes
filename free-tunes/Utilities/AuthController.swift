@@ -8,5 +8,5 @@
 import Foundation
 
 struct AuthController{
-    var userAuthToken: String = "frkVbouSleZwMVNEIGMs7JIX4wS138lZ145BYn2atQ7hVKEFmwR"
+    var userAuthToken: String = "frlXETYeV2BKs8vJuV4zsK53urNmWmOORnjO56t3NiUvSYvhbJp"
 }
