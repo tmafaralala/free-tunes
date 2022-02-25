@@ -10,6 +10,7 @@
 		0BCC8B7F27C8C14000F029D2 /* AlbumRecommendationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B7E27C8C14000F029D2 /* AlbumRecommendationsModel.swift */; };
 		0BCC8B8127C8C1C200F029D2 /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B8027C8C1C200F029D2 /* ExploreViewModel.swift */; };
 		0BCC8B8427C8C41100F029D2 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B8327C8C41100F029D2 /* AuthController.swift */; };
+		0BCC8B8627C8C7F000F029D2 /* ApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B8527C8C7F000F029D2 /* ApiCaller.swift */; };
 		0BEAF48627C79F7700C0590D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEAF48527C79F7700C0590D /* AppDelegate.swift */; };
 		0BEAF48827C79F7700C0590D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEAF48727C79F7700C0590D /* SceneDelegate.swift */; };
 		0BEAF48A27C79F7700C0590D /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEAF48927C79F7700C0590D /* ExploreViewController.swift */; };
@@ -42,6 +43,7 @@
 		0BCC8B7E27C8C14000F029D2 /* AlbumRecommendationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumRecommendationsModel.swift; sourceTree = "<group>"; };
 		0BCC8B8027C8C1C200F029D2 /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExploreViewModel.swift; path = "free-tunes/ViewModels/ExploreViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		0BCC8B8327C8C41100F029D2 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
+		0BCC8B8527C8C7F000F029D2 /* ApiCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCaller.swift; sourceTree = "<group>"; };
 		0BEAF48227C79F7700C0590D /* free-tunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "free-tunes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BEAF48527C79F7700C0590D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BEAF48727C79F7700C0590D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				0BCC8B8327C8C41100F029D2 /* AuthController.swift */,
+				0BCC8B8527C8C7F000F029D2 /* ApiCaller.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 			files = (
 				0BCC8B7F27C8C14000F029D2 /* AlbumRecommendationsModel.swift in Sources */,
 				0BCC8B8427C8C41100F029D2 /* AuthController.swift in Sources */,
+				0BCC8B8627C8C7F000F029D2 /* ApiCaller.swift in Sources */,
 				0BCC8B8127C8C1C200F029D2 /* ExploreViewModel.swift in Sources */,
 				0BEAF48A27C79F7700C0590D /* ExploreViewController.swift in Sources */,
 				0BEAF48627C79F7700C0590D /* AppDelegate.swift in Sources */,
