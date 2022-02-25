@@ -13,7 +13,7 @@ struct AlbumRecommendations: Codable{
     
     enum CodingKeys: String, CodingKey{
         case albums = "data"
-    }c
+    }
 }
 
 struct Album: Codable{
