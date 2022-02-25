@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BCC8B7F27C8C14000F029D2 /* AlbumRecommendationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B7E27C8C14000F029D2 /* AlbumRecommendationsModel.swift */; };
+		0BCC8B8127C8C1C200F029D2 /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B8027C8C1C200F029D2 /* ExploreViewModel.swift */; };
 		0BEAF48627C79F7700C0590D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEAF48527C79F7700C0590D /* AppDelegate.swift */; };
 		0BEAF48827C79F7700C0590D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEAF48727C79F7700C0590D /* SceneDelegate.swift */; };
-		0BEAF48A27C79F7700C0590D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEAF48927C79F7700C0590D /* ViewController.swift */; };
+		0BEAF48A27C79F7700C0590D /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEAF48927C79F7700C0590D /* ExploreViewController.swift */; };
 		0BEAF48D27C79F7700C0590D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BEAF48B27C79F7700C0590D /* Main.storyboard */; };
 		0BEAF48F27C79F7B00C0590D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BEAF48E27C79F7B00C0590D /* Assets.xcassets */; };
 		0BEAF49227C79F7B00C0590D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BEAF49027C79F7B00C0590D /* LaunchScreen.storyboard */; };
@@ -36,10 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BCC8B7E27C8C14000F029D2 /* AlbumRecommendationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumRecommendationsModel.swift; sourceTree = "<group>"; };
+		0BCC8B8027C8C1C200F029D2 /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExploreViewModel.swift; path = "free-tunes/ViewModels/ExploreViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		0BEAF48227C79F7700C0590D /* free-tunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "free-tunes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BEAF48527C79F7700C0590D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BEAF48727C79F7700C0590D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0BEAF48927C79F7700C0590D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0BEAF48927C79F7700C0590D /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		0BEAF48C27C79F7700C0590D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0BEAF48E27C79F7B00C0590D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0BEAF49127C79F7B00C0590D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,6 +80,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BCC8B7A27C8BF0F00F029D2 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		0BCC8B7B27C8BF3D00F029D2 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				0BEAF49327C79F7B00C0590D /* Info.plist */,
+				0BEAF48527C79F7700C0590D /* AppDelegate.swift */,
+				0BEAF48727C79F7700C0590D /* SceneDelegate.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		0BCC8B8227C8C21E00F029D2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				0BCC8B8027C8C1C200F029D2 /* ExploreViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		0BEAF47927C79F7700C0590D = {
 			isa = PBXGroup;
 			children = (
@@ -99,12 +128,13 @@
 		0BEAF48427C79F7700C0590D /* free-tunes */ = {
 			isa = PBXGroup;
 			children = (
+				0BCC8B7B27C8BF3D00F029D2 /* Config */,
+				0BCC8B7A27C8BF0F00F029D2 /* Utilities */,
 				0BEAF4B927C7A13600C0590D /* Resources */,
-				0BEAF4B827C7A10D00C0590D /* Views */,
+				0BEAF4B827C7A10D00C0590D /* UserInterfaces */,
 				0BEAF4B727C7A05700C0590D /* Controllers */,
 				0BEAF4B627C7A04E00C0590D /* Models */,
-				0BEAF4B527C7A03C00C0590D /* ViewModels */,
-				0BEAF49327C79F7B00C0590D /* Info.plist */,
+				0BCC8B8227C8C21E00F029D2 /* ViewModels */,
 			);
 			path = "free-tunes";
 			sourceTree = "<group>";
@@ -126,16 +156,10 @@
 			path = "free-tunesUITests";
 			sourceTree = "<group>";
 		};
-		0BEAF4B527C7A03C00C0590D /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		0BEAF4B627C7A04E00C0590D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0BCC8B7E27C8C14000F029D2 /* AlbumRecommendationsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -143,26 +167,24 @@
 		0BEAF4B727C7A05700C0590D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0BEAF48927C79F7700C0590D /* ViewController.swift */,
+				0BEAF48927C79F7700C0590D /* ExploreViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		0BEAF4B827C7A10D00C0590D /* Views */ = {
+		0BEAF4B827C7A10D00C0590D /* UserInterfaces */ = {
 			isa = PBXGroup;
 			children = (
 				0BEAF48B27C79F7700C0590D /* Main.storyboard */,
 				0BEAF49027C79F7B00C0590D /* LaunchScreen.storyboard */,
 			);
-			path = Views;
+			path = UserInterfaces;
 			sourceTree = "<group>";
 		};
 		0BEAF4B927C7A13600C0590D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				0BEAF48E27C79F7B00C0590D /* Assets.xcassets */,
-				0BEAF48527C79F7700C0590D /* AppDelegate.swift */,
-				0BEAF48727C79F7700C0590D /* SceneDelegate.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -298,7 +320,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BEAF48A27C79F7700C0590D /* ViewController.swift in Sources */,
+				0BCC8B7F27C8C14000F029D2 /* AlbumRecommendationsModel.swift in Sources */,
+				0BCC8B8127C8C1C200F029D2 /* ExploreViewModel.swift in Sources */,
+				0BEAF48A27C79F7700C0590D /* ExploreViewController.swift in Sources */,
 				0BEAF48627C79F7700C0590D /* AppDelegate.swift in Sources */,
 				0BEAF48827C79F7700C0590D /* SceneDelegate.swift in Sources */,
 			);
@@ -480,7 +504,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "free-tunes/Info.plist";
+				INFOPLIST_FILE = "free-tunes/Config/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -507,7 +531,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "free-tunes/Info.plist";
+				INFOPLIST_FILE = "free-tunes/Config/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
