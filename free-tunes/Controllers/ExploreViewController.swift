@@ -12,7 +12,7 @@ let authManager = AuthController()
 class ExploreViewController: UIViewController {
     
     @IBOutlet weak var albumRecommendationsCollectionView: UICollectionView!
-    private lazy var exploreViewModel = ExploreViewModel(exploreDelegate: self)
+    private lazy var exploreViewModel = ExploreViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,10 +61,3 @@ extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDataS
         cell.designCell()
     }
 }
-
-extension ExploreViewController: ExploreViewModelDelegate{
-
-}
-
-
-
