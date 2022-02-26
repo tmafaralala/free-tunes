@@ -7,28 +7,22 @@
 
 import Foundation
 
-
-import Foundation
-
-extension URLSession{
-    
-        enum CustomError: Error{
+extension URLSession {
+        enum CustomError: Error {
             case invalidResponse
             case invalidRequest
             case invalidBody
             case invalidUrl
             case invalidData
         }
-        
         enum HttpMethod: String {
             case get = "GET"
          case post = "POST"
             case delete = "DELETE"
         }
-        
-        private func buildRequest(url: URL, httpMethod: HttpMethod?, bodyParamaters: [String:Any]?, serilizedBody: Data?) throws -> URLRequest{
-            
-            var request = URLRequest(url:url)
+    private func buildRequest(url: URL, httpMethod: HttpMethod?,
+                              bodyParamaters: [String: Any]?, serilizedBody: Data?) throws -> URLRequest {
+            var request = URLRequest(url: url)
 
             request.httpMethod = HttpMethod.get.rawValue
 
@@ -37,18 +31,18 @@ extension URLSession{
             if let serviceMethod = httpMethod {
                 request.httpMethod = serviceMethod.rawValue
             }
-            
-            if let safeParamaters = bodyParamaters{
+            if let safeParamaters = bodyParamaters {
 
-                if let body = try? JSONSerialization.data(withJSONObject: safeParamaters, options: []){
+                if let body = try? JSONSerialization.data(
+                    withJSONObject: safeParamaters, options: []) {
 
                     request.httpBody = body
                     print(body.description)
                 } else {
                     throw CustomError.invalidBody
                 }
-                
-            }else if let body = serilizedBody{
+            } else
+        if let body = serilizedBody {
                 request.httpBody = body
             }
             return request
@@ -59,43 +53,36 @@ extension URLSession{
                                            returnModel: Generic.Type,
                                            paramters: [String: Any]? = nil,
                                            knownBody: Data? = nil,
-                                           completion: @escaping (Result<Generic, Error>) -> Void){
-            
+                                           completion: @escaping (Result<Generic, Error>) -> Void) {
             guard let endpointUrl = url else {
                 completion(.failure(CustomError.invalidUrl))
                 return
             }
-            
-            
-            do{
-
-                let urlRequest = try buildRequest(url: endpointUrl, httpMethod: method, bodyParamaters: paramters, serilizedBody: knownBody)
-                
+            do {
+                let urlRequest = try buildRequest(url: endpointUrl,
+                                                  httpMethod: method,
+                                                  bodyParamaters: paramters, serilizedBody: knownBody)
                 let apiTask = self.dataTask(with: urlRequest) { data, _, error in
 
                     guard let safeData = data else {
-                        if let error = error{
+                        if let error = error {
                             completion(.failure(error))
-                        }else{
+                        } else {
                             completion(.failure(CustomError.invalidData))
                         }
                         return
                     }
-                    
-                    do{
+                    do {
                         let result = try JSONDecoder().decode(returnModel, from: safeData)
                         completion(.success(result))
-                    }catch{
+                    } catch {
                         completion(.failure(error))
                     }
-                    
                 }
                 apiTask.resume()
-                
-            }catch CustomError.invalidBody{
+            } catch CustomError.invalidBody {
                 completion(.failure(CustomError.invalidRequest))
-                
-            }catch{
+            } catch {
                 completion(.failure(error))
             }
         }

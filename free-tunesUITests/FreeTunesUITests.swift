@@ -7,6 +7,6 @@
 
 import XCTest
 
-class free_tunesUITests: XCTestCase {
+class FreeTunesUITests: XCTestCase {
 
 }

@@ -44,7 +44,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AlbumRecommendationCell" id="hfG-rv-v7Y" userLabel="Album Recommendations Collection View Cell" customClass="AlbumCollectionViewCell" customModule="free_tunes" customModuleProvider="target">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AlbumCell" id="hfG-rv-v7Y" userLabel="Album Recommendations Collection View Cell" customClass="AlbumCollectionViewCell" customModule="free_tunes" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="1.5" width="156" height="193"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0Qt-0v-htU">
@@ -94,7 +94,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="albumRecommendationsCollectionView" destination="6fU-NR-SKc" id="EMf-aq-y4W"/>
+                        <outlet property="albumCollectionView" destination="6fU-NR-SKc" id="3ER-Li-yQW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

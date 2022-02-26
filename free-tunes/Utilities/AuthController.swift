@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct AuthController{
+struct AuthController {
     var userAuthToken: String = "frlXETYeV2BKs8vJuV4zsK53urNmWmOORnjO56t3NiUvSYvhbJp"
 }

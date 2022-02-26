@@ -7,16 +7,14 @@
 
 import Foundation
 
-struct AlbumRecommendations: Codable{
-    
+struct AlbumRecommendations: Codable {
     let albums: [Album]
-    
-    enum CodingKeys: String, CodingKey{
+    enum CodingKeys: String, CodingKey {
         case albums = "data"
     }
 }
 
-struct Album: Codable{
+struct Album: Codable {
     let id: Int
     let title: String
     let cover: String

@@ -20,9 +20,9 @@
 		0BEAF48D27C79F7700C0590D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BEAF48B27C79F7700C0590D /* Main.storyboard */; };
 		0BEAF48F27C79F7B00C0590D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BEAF48E27C79F7B00C0590D /* Assets.xcassets */; };
 		0BEAF49227C79F7B00C0590D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BEAF49027C79F7B00C0590D /* LaunchScreen.storyboard */; };
-		0BEAF49D27C79F7C00C0590D /* free_tunesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEAF49C27C79F7C00C0590D /* free_tunesTests.swift */; };
-		0BEAF4A727C79F7C00C0590D /* free_tunesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEAF4A627C79F7C00C0590D /* free_tunesUITests.swift */; };
-		0BEAF4A927C79F7C00C0590D /* free_tunesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEAF4A827C79F7C00C0590D /* free_tunesUITestsLaunchTests.swift */; };
+		0BEAF49D27C79F7C00C0590D /* FreeTunesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEAF49C27C79F7C00C0590D /* FreeTunesTests.swift */; };
+		0BEAF4A727C79F7C00C0590D /* FreeTunesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEAF4A627C79F7C00C0590D /* FreeTunesUITests.swift */; };
+		0BEAF4A927C79F7C00C0590D /* FreeTunesUITestsLaunchTests in Sources */ = {isa = PBXBuildFile; fileRef = 0BEAF4A827C79F7C00C0590D /* FreeTunesUITestsLaunchTests */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,10 +59,10 @@
 		0BEAF49127C79F7B00C0590D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0BEAF49327C79F7B00C0590D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BEAF49827C79F7C00C0590D /* free-tunesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "free-tunesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0BEAF49C27C79F7C00C0590D /* free_tunesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = free_tunesTests.swift; sourceTree = "<group>"; };
+		0BEAF49C27C79F7C00C0590D /* FreeTunesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTunesTests.swift; sourceTree = "<group>"; };
 		0BEAF4A227C79F7C00C0590D /* free-tunesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "free-tunesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0BEAF4A627C79F7C00C0590D /* free_tunesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = free_tunesUITests.swift; sourceTree = "<group>"; };
-		0BEAF4A827C79F7C00C0590D /* free_tunesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = free_tunesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0BEAF4A627C79F7C00C0590D /* FreeTunesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTunesUITests.swift; sourceTree = "<group>"; };
+		0BEAF4A827C79F7C00C0590D /* FreeTunesUITestsLaunchTests */ = {isa = PBXFileReference; lastKnownFileType = text; path = FreeTunesUITestsLaunchTests; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,7 +156,7 @@
 		0BEAF49B27C79F7C00C0590D /* free-tunesTests */ = {
 			isa = PBXGroup;
 			children = (
-				0BEAF49C27C79F7C00C0590D /* free_tunesTests.swift */,
+				0BEAF49C27C79F7C00C0590D /* FreeTunesTests.swift */,
 			);
 			path = "free-tunesTests";
 			sourceTree = "<group>";
@@ -164,8 +164,8 @@
 		0BEAF4A527C79F7C00C0590D /* free-tunesUITests */ = {
 			isa = PBXGroup;
 			children = (
-				0BEAF4A627C79F7C00C0590D /* free_tunesUITests.swift */,
-				0BEAF4A827C79F7C00C0590D /* free_tunesUITestsLaunchTests.swift */,
+				0BEAF4A627C79F7C00C0590D /* FreeTunesUITests.swift */,
+				0BEAF4A827C79F7C00C0590D /* FreeTunesUITestsLaunchTests */,
 			);
 			path = "free-tunesUITests";
 			sourceTree = "<group>";
@@ -211,6 +211,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0BEAF4AC27C79F7C00C0590D /* Build configuration list for PBXNativeTarget "free-tunes" */;
 			buildPhases = (
+				0B5F54B427C97E3C0035FE46 /* ShellScript */,
 				0BEAF47E27C79F7700C0590D /* Sources */,
 				0BEAF47F27C79F7700C0590D /* Frameworks */,
 				0BEAF48027C79F7700C0590D /* Resources */,
@@ -330,6 +331,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0B5F54B427C97E3C0035FE46 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\nexport PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0BEAF47E27C79F7700C0590D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -352,7 +373,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BEAF49D27C79F7C00C0590D /* free_tunesTests.swift in Sources */,
+				0BEAF49D27C79F7C00C0590D /* FreeTunesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,8 +381,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BEAF4A927C79F7C00C0590D /* free_tunesUITestsLaunchTests.swift in Sources */,
-				0BEAF4A727C79F7C00C0590D /* free_tunesUITests.swift in Sources */,
+				0BEAF4A927C79F7C00C0590D /* FreeTunesUITestsLaunchTests in Sources */,
+				0BEAF4A727C79F7C00C0590D /* FreeTunesUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

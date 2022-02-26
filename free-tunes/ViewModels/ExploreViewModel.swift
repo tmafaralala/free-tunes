@@ -7,25 +7,18 @@
 
 import Foundation
 
-struct ExploreViewModel{
-    
+struct ExploreViewModel {
     private var recommendedAlbums: [Album]
-    
-    init(){
+    init() {
         self.recommendedAlbums = []
     }
-    
     var recommendedAlbumCount: Int {
         return recommendedAlbums.count
     }
-    
     func getRecommendedAlbum(atIndex: Int) -> Album {
         return recommendedAlbums[atIndex]
     }
-    
-    mutating func storeAlbumsData(albums: [Album]){
+    mutating func storeAlbumsData(albums: [Album]) {
         recommendedAlbums = albums
     }
 }
-
-

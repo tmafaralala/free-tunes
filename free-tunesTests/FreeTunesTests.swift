@@ -9,8 +9,6 @@ import XCTest
 
 @testable import free_tunes
 
-class free_tunesTests: XCTestCase {
-
-
+class FreeTunesTests: XCTestCase {
 
 }
