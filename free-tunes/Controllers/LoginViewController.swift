@@ -60,3 +60,18 @@ extension LoginViewController: UITextFieldDelegate {
         }
     }
 }
+
+extension UITextField {
+    func emptyFieldError() {
+        guard let name = self.layer.name else {
+            return
+        }
+        if self.text != "" {
+            return
+        }
+        self.attributedPlaceholder = NSAttributedString(
+            string: name+" required.",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.red]
+        )
+    }
+}
