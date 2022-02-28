@@ -14,6 +14,12 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordInput: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//        setupUsernameField()
+//        setupPasswordField()
+//        buildCustomLabel()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        super.viewWillAppear(animated)
     }
 }
