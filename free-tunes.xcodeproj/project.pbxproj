@@ -7,16 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0BCC8B7F27C8C14000F029D2 /* AlbumRecommendationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B7E27C8C14000F029D2 /* AlbumRecommendationsModel.swift */; };
+		0B5F54B627CACFB30035FE46 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F54B527CACFB30035FE46 /* OnBoardingViewController.swift */; };
+		0B5F54B827CC3E1E0035FE46 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F54B727CC3E1E0035FE46 /* LoginViewController.swift */; };
+		0B5F54BA27CC57D10035FE46 /* ArtistExplorerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F54B927CC57D10035FE46 /* ArtistExplorerViewController.swift */; };
+		0B5F54BC27CC6D590035FE46 /* TopArtistsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F54BB27CC6D590035FE46 /* TopArtistsCell.swift */; };
+		0BCC8B7F27C8C14000F029D2 /* ArtistExplorerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B7E27C8C14000F029D2 /* ArtistExplorerModel.swift */; };
 		0BCC8B8127C8C1C200F029D2 /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B8027C8C1C200F029D2 /* ExploreViewModel.swift */; };
 		0BCC8B8427C8C41100F029D2 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B8327C8C41100F029D2 /* AuthController.swift */; };
 		0BCC8B8627C8C7F000F029D2 /* ApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B8527C8C7F000F029D2 /* ApiCaller.swift */; };
 		0BCC8B8827C8C8BA00F029D2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B8727C8C8BA00F029D2 /* Constants.swift */; };
-		0BCC8B8B27C8CA6A00F029D2 /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B8A27C8CA6A00F029D2 /* AlbumCollectionViewCell.swift */; };
 		0BCC8B8D27C8CC9C00F029D2 /* ApiImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B8C27C8CC9C00F029D2 /* ApiImageLoader.swift */; };
 		0BEAF48627C79F7700C0590D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEAF48527C79F7700C0590D /* AppDelegate.swift */; };
 		0BEAF48827C79F7700C0590D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEAF48727C79F7700C0590D /* SceneDelegate.swift */; };
-		0BEAF48A27C79F7700C0590D /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEAF48927C79F7700C0590D /* ExploreViewController.swift */; };
 		0BEAF48D27C79F7700C0590D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BEAF48B27C79F7700C0590D /* Main.storyboard */; };
 		0BEAF48F27C79F7B00C0590D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BEAF48E27C79F7B00C0590D /* Assets.xcassets */; };
 		0BEAF49227C79F7B00C0590D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BEAF49027C79F7B00C0590D /* LaunchScreen.storyboard */; };
@@ -43,17 +45,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0BCC8B7E27C8C14000F029D2 /* AlbumRecommendationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumRecommendationsModel.swift; sourceTree = "<group>"; };
+		0B5F54B527CACFB30035FE46 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		0B5F54B727CC3E1E0035FE46 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0B5F54B927CC57D10035FE46 /* ArtistExplorerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistExplorerViewController.swift; sourceTree = "<group>"; };
+		0B5F54BB27CC6D590035FE46 /* TopArtistsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopArtistsCell.swift; sourceTree = "<group>"; };
+		0BCC8B7E27C8C14000F029D2 /* ArtistExplorerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistExplorerModel.swift; sourceTree = "<group>"; };
 		0BCC8B8027C8C1C200F029D2 /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExploreViewModel.swift; path = "free-tunes/ViewModels/ExploreViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		0BCC8B8327C8C41100F029D2 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 		0BCC8B8527C8C7F000F029D2 /* ApiCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCaller.swift; sourceTree = "<group>"; };
 		0BCC8B8727C8C8BA00F029D2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		0BCC8B8A27C8CA6A00F029D2 /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
 		0BCC8B8C27C8CC9C00F029D2 /* ApiImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiImageLoader.swift; sourceTree = "<group>"; };
 		0BEAF48227C79F7700C0590D /* free-tunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "free-tunes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BEAF48527C79F7700C0590D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BEAF48727C79F7700C0590D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0BEAF48927C79F7700C0590D /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		0BEAF48C27C79F7700C0590D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0BEAF48E27C79F7B00C0590D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0BEAF49127C79F7B00C0590D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -173,7 +177,7 @@
 		0BEAF4B627C7A04E00C0590D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0BCC8B7E27C8C14000F029D2 /* AlbumRecommendationsModel.swift */,
+				0BCC8B7E27C8C14000F029D2 /* ArtistExplorerModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -181,8 +185,10 @@
 		0BEAF4B727C7A05700C0590D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0BEAF48927C79F7700C0590D /* ExploreViewController.swift */,
-				0BCC8B8A27C8CA6A00F029D2 /* AlbumCollectionViewCell.swift */,
+				0B5F54B527CACFB30035FE46 /* OnBoardingViewController.swift */,
+				0B5F54B727CC3E1E0035FE46 /* LoginViewController.swift */,
+				0B5F54B927CC57D10035FE46 /* ArtistExplorerViewController.swift */,
+				0B5F54BB27CC6D590035FE46 /* TopArtistsCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -356,15 +362,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BCC8B8B27C8CA6A00F029D2 /* AlbumCollectionViewCell.swift in Sources */,
-				0BCC8B7F27C8C14000F029D2 /* AlbumRecommendationsModel.swift in Sources */,
+				0BCC8B7F27C8C14000F029D2 /* ArtistExplorerModel.swift in Sources */,
+				0B5F54BA27CC57D10035FE46 /* ArtistExplorerViewController.swift in Sources */,
+				0B5F54B627CACFB30035FE46 /* OnBoardingViewController.swift in Sources */,
 				0BCC8B8427C8C41100F029D2 /* AuthController.swift in Sources */,
 				0BCC8B8627C8C7F000F029D2 /* ApiCaller.swift in Sources */,
 				0BCC8B8127C8C1C200F029D2 /* ExploreViewModel.swift in Sources */,
-				0BEAF48A27C79F7700C0590D /* ExploreViewController.swift in Sources */,
 				0BEAF48627C79F7700C0590D /* AppDelegate.swift in Sources */,
 				0BEAF48827C79F7700C0590D /* SceneDelegate.swift in Sources */,
+				0B5F54BC27CC6D590035FE46 /* TopArtistsCell.swift in Sources */,
 				0BCC8B8827C8C8BA00F029D2 /* Constants.swift in Sources */,
+				0B5F54B827CC3E1E0035FE46 /* LoginViewController.swift in Sources */,
 				0BCC8B8D27C8CC9C00F029D2 /* ApiImageLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

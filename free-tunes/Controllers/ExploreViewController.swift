@@ -10,25 +10,26 @@ import UIKit
 let authManager = AuthController()
 
 class ExploreViewController: UIViewController {
-    @IBOutlet weak var albumCollectionView: UICollectionView!
+
+    @IBOutlet weak var exploreCollectionView: UICollectionView!
     private lazy var exploreViewModel = ExploreViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-        getAlbumReccomendations()
+        setUpExploreCollectionView()
     }
-    func setUpAlbumRecommendationCollectionView() {
-        albumCollectionView.dataSource = self
-        albumCollectionView.delegate = self
+    func setUpExploreCollectionView() {
+        exploreCollectionView.dataSource = self
+        exploreCollectionView.delegate = self
     }
 
-    func getAlbumReccomendations() {
+    func getExploreViewContent() {
         let url = Constants.exploreContentUrl
         URLSession.shared.makeRequest(url: url, method: .get, returnModel: AlbumRecommendations.self) { result in
             switch result {
             case .success(let recommended):
                 self.exploreViewModel.storeAlbumsData(albums: recommended.albums)
                 DispatchQueue.main.async {
-                    self.setUpAlbumRecommendationCollectionView()
+                    self.setUpExploreCollectionView()
                 }
             case .failure(let error):
                 print(error)
@@ -40,17 +41,18 @@ class ExploreViewController: UIViewController {
 
 extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        exploreViewModel.recommendedAlbumCount
+//        exploreViewModel.recommendedAlbumCount
+        5
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) ->
     UICollectionViewCell {
-        guard let cell = albumCollectionView.dequeueReusableCell(withReuseIdentifier: "AlbumCell", for: indexPath)
-                as? AlbumCollectionViewCell
+        guard let cell = exploreCollectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
+                as UICollectionViewCell?
         else {
             return UICollectionViewCell()
         }
-        setupAlbumCell(url: exploreViewModel.getRecommendedAlbum(atIndex: indexPath.item).cover, cell: cell,
-            index: indexPath.item)
+//        setupAlbumCell(url: exploreViewModel.getRecommendedAlbum(atIndex: indexPath.item).cover, cell: cell,
+//            index: indexPath.item)
         return cell
     }
     func setupAlbumCell(url: String, cell: AlbumCollectionViewCell, index: Int ) {

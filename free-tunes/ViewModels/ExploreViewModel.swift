@@ -8,17 +8,17 @@
 import Foundation
 
 struct ExploreViewModel {
-    private var recommendedAlbums: [Album]
+    private var topArtists: [Artist]
     init() {
-        self.recommendedAlbums = []
+        self.topArtists = []
     }
-    var recommendedAlbumCount: Int {
-        return recommendedAlbums.count
+    var numberOfArtists: Int {
+        return topArtists.count
     }
-    func getRecommendedAlbum(atIndex: Int) -> Album {
-        return recommendedAlbums[atIndex]
+    func getArtist(atIndex: Int) -> Artist {
+        return topArtists[atIndex]
     }
-    mutating func storeAlbumsData(albums: [Album]) {
-        recommendedAlbums = albums
+    mutating func storeArtistsData(artists: [Artist]) {
+        topArtists = artists
     }
 }
