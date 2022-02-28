@@ -23,20 +23,12 @@ class LoginViewController: UIViewController {
         super.viewWillAppear(animated)
     }
     func setupUsernameField() {
-        usernameInput.layer.borderColor = (UIColor.lightGray).cgColor
-        usernameInput.layer.masksToBounds = true
-        usernameInput.layer.borderWidth = 1.5
-        usernameInput.layer.cornerRadius = 8
-        usernameInput.layer.name = "Username"
+        usernameInput.applyDefaultStyle(withName: "Username")
         usernameInput.delegate = self
-        passwordInput.delegate = self
+        usernameInput.delegate = self
     }
     func setupPasswordField() {
-        passwordInput.layer.borderColor = (UIColor.lightGray).cgColor
-        passwordInput.layer.masksToBounds = true
-        passwordInput.layer.borderWidth = 1.5
-        passwordInput.layer.cornerRadius = 8
-        passwordInput.layer.name = "Password"
+        passwordInput.applyDefaultStyle(withName: "Password")
         passwordInput.delegate = self
         passwordInput.delegate = self
     }
@@ -104,5 +96,13 @@ extension UITextField {
             string: name+" required.",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.red]
         )
+    }
+
+    func applyDefaultStyle(withName: String) {
+        self.layer.borderColor = (UIColor.lightGray).cgColor
+        self.layer.masksToBounds = true
+        self.layer.borderWidth = 1.5
+        self.layer.cornerRadius = 8
+        self.layer.name = withName
     }
 }
