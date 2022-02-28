@@ -16,7 +16,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         setupUsernameField()
         setupPasswordField()
-//        buildCustomLabel()
+        buildCustomLabel()
     }
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
@@ -50,6 +50,17 @@ class LoginViewController: UIViewController {
         let attributedString2 = NSMutableAttributedString(string: "Tunes", attributes: attrs2)
         attributedString1.append(attributedString2)
         headerText.attributedText = attributedString1
+    }
+    func loginRequest() -> Bool {
+        if usernameInput.text != "Admin" || passwordInput.text != "TestPass123" {
+            let alert = UIAlertController(title: "Invalid credentials.",
+                                          message: "Incorrect Username or Password.",
+                                          preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Try again", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return false
+        }
+        return true
     }
 }
 
