@@ -62,6 +62,15 @@ class LoginViewController: UIViewController {
         }
         return true
     }
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if usernameInput.text != "" && passwordInput.text != "" {
+            return loginRequest()
+        }
+        usernameInput.emptyFieldError()
+        passwordInput.emptyFieldError()
+        return false
+    }
+
 }
 
 extension LoginViewController: UITextFieldDelegate {
