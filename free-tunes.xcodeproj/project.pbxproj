@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0B5F54BA27CC57D10035FE46 /* ArtistExplorerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F54B927CC57D10035FE46 /* ArtistExplorerViewController.swift */; };
 		0B5F54BC27CC6D590035FE46 /* TopArtistsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F54BB27CC6D590035FE46 /* TopArtistsCell.swift */; };
+		0B7AECD127CCE00E00D23D4A /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7AECD027CCE00E00D23D4A /* OnBoardingViewController.swift */; };
 		0BCC8B7F27C8C14000F029D2 /* ArtistExplorerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B7E27C8C14000F029D2 /* ArtistExplorerModel.swift */; };
 		0BCC8B8127C8C1C200F029D2 /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B8027C8C1C200F029D2 /* ExploreViewModel.swift */; };
 		0BCC8B8427C8C41100F029D2 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B8327C8C41100F029D2 /* AuthController.swift */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		0B5F54B927CC57D10035FE46 /* ArtistExplorerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistExplorerViewController.swift; sourceTree = "<group>"; };
 		0B5F54BB27CC6D590035FE46 /* TopArtistsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopArtistsCell.swift; sourceTree = "<group>"; };
+		0B7AECD027CCE00E00D23D4A /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		0BCC8B7E27C8C14000F029D2 /* ArtistExplorerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistExplorerModel.swift; sourceTree = "<group>"; };
 		0BCC8B8027C8C1C200F029D2 /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExploreViewModel.swift; path = "free-tunes/ViewModels/ExploreViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		0BCC8B8327C8C41100F029D2 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 			children = (
 				0B5F54B927CC57D10035FE46 /* ArtistExplorerViewController.swift */,
 				0B5F54BB27CC6D590035FE46 /* TopArtistsCell.swift */,
+				0B7AECD027CCE00E00D23D4A /* OnBoardingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				0B5F54BC27CC6D590035FE46 /* TopArtistsCell.swift in Sources */,
 				0BCC8B8827C8C8BA00F029D2 /* Constants.swift in Sources */,
 				0BCC8B8D27C8CC9C00F029D2 /* ApiImageLoader.swift in Sources */,
+				0B7AECD127CCE00E00D23D4A /* OnBoardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

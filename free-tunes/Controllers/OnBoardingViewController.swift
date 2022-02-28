@@ -1,8 +1,8 @@
 //
-//  LandingViewController.swift
+//  OnBoardingViewController.swift
 //  free-tunes
 //
-//  Created by Tshwarelo Mafaralala on 2022/02/26.
+//  Created by Tshwarelo Mafaralala on 2022/02/28.
 //
 
 import UIKit
@@ -31,5 +31,4 @@ class OnBoardingViewController: UIViewController {
         attributedString1.append(attributedString2)
         headerText.attributedText = attributedString1
     }
-
 }
