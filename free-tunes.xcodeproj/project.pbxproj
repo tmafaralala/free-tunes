@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B5F54B627CACFB30035FE46 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F54B527CACFB30035FE46 /* OnBoardingViewController.swift */; };
-		0B5F54B827CC3E1E0035FE46 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F54B727CC3E1E0035FE46 /* LoginViewController.swift */; };
 		0B5F54BA27CC57D10035FE46 /* ArtistExplorerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F54B927CC57D10035FE46 /* ArtistExplorerViewController.swift */; };
 		0B5F54BC27CC6D590035FE46 /* TopArtistsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F54BB27CC6D590035FE46 /* TopArtistsCell.swift */; };
 		0BCC8B7F27C8C14000F029D2 /* ArtistExplorerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B7E27C8C14000F029D2 /* ArtistExplorerModel.swift */; };
@@ -45,8 +43,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0B5F54B527CACFB30035FE46 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
-		0B5F54B727CC3E1E0035FE46 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0B5F54B927CC57D10035FE46 /* ArtistExplorerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistExplorerViewController.swift; sourceTree = "<group>"; };
 		0B5F54BB27CC6D590035FE46 /* TopArtistsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopArtistsCell.swift; sourceTree = "<group>"; };
 		0BCC8B7E27C8C14000F029D2 /* ArtistExplorerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistExplorerModel.swift; sourceTree = "<group>"; };
@@ -185,8 +181,6 @@
 		0BEAF4B727C7A05700C0590D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0B5F54B527CACFB30035FE46 /* OnBoardingViewController.swift */,
-				0B5F54B727CC3E1E0035FE46 /* LoginViewController.swift */,
 				0B5F54B927CC57D10035FE46 /* ArtistExplorerViewController.swift */,
 				0B5F54BB27CC6D590035FE46 /* TopArtistsCell.swift */,
 			);
@@ -364,7 +358,6 @@
 			files = (
 				0BCC8B7F27C8C14000F029D2 /* ArtistExplorerModel.swift in Sources */,
 				0B5F54BA27CC57D10035FE46 /* ArtistExplorerViewController.swift in Sources */,
-				0B5F54B627CACFB30035FE46 /* OnBoardingViewController.swift in Sources */,
 				0BCC8B8427C8C41100F029D2 /* AuthController.swift in Sources */,
 				0BCC8B8627C8C7F000F029D2 /* ApiCaller.swift in Sources */,
 				0BCC8B8127C8C1C200F029D2 /* ExploreViewModel.swift in Sources */,
@@ -372,7 +365,6 @@
 				0BEAF48827C79F7700C0590D /* SceneDelegate.swift in Sources */,
 				0B5F54BC27CC6D590035FE46 /* TopArtistsCell.swift in Sources */,
 				0BCC8B8827C8C8BA00F029D2 /* Constants.swift in Sources */,
-				0B5F54B827CC3E1E0035FE46 /* LoginViewController.swift in Sources */,
 				0BCC8B8D27C8CC9C00F029D2 /* ApiImageLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
