@@ -25,12 +25,12 @@ class ArtistExplorerViewController: UIViewController {
     }
     func getExploreViewContent() {
         let url = Constants.artistExploreContentUrl
-        URLSession.shared.makeRequest(url: url, method: .get, returnModel: Artists.self) { result in
+        URLSession.shared.makeRequest(url: url, method: .get, returnModel: Artists.self) {[weak self] result in
             switch result {
             case .success(let topArtists):
-                self.exploreViewModel.storeArtistsData(artists: topArtists.artists)
+                self?.exploreViewModel.storeArtistsData(artists: topArtists.artists)
                 DispatchQueue.main.async {
-                    self.setUpExploreCollectionView()
+                    self?.setUpExploreCollectionView()
                 }
             case .failure(let error):
                 print(error)
