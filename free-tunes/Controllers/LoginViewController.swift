@@ -62,6 +62,7 @@ class LoginViewController: UIViewController {
         passwordInput.emptyFieldError()
         return false
     }
+    
 
 }
 
@@ -70,9 +71,10 @@ extension LoginViewController: UITextFieldDelegate {
         guard let name = textField.layer.name else {
             return
         }
-        if name == "Username" || name == "Password"{
-        textField.layer.borderColor = (UIColor(red: 81/255, green: 166/255, blue: 248/255, alpha: 1)).cgColor
+        if name == "Username" || name == "Password" {
+            textField.layer.borderColor = UIColor(named: "PrimaryColor")?.cgColor
         }
+        
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
         guard let name = textField.layer.name else {
@@ -106,3 +108,5 @@ extension UITextField {
         self.layer.name = withName
     }
 }
+
+
