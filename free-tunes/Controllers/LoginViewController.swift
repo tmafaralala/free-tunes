@@ -64,7 +64,7 @@ extension LoginViewController: UITextFieldDelegate {
             return
         }
         if name == "Username" || name == "Password" {
-            textField.layer.borderColor = UIColor(named: "PrimaryColor")?.cgColor
+            textField.layer.borderColor = UIColor(named: "AppPrimaryColor")?.cgColor
         }
 
     }
