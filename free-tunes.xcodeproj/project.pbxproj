@@ -13,7 +13,6 @@
 		0B7AECD327CCE16900D23D4A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7AECD227CCE16900D23D4A /* LoginViewController.swift */; };
 		0BA6FD6327CEA17000396D28 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA6FD6227CEA17000396D28 /* CustomLabel.swift */; };
 		0BA6FD6527CEA1F000396D28 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA6FD6427CEA1F000396D28 /* CustomTextField.swift */; };
-		0BA6FD6727CEA24C00396D28 /* AppAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA6FD6627CEA24C00396D28 /* AppAlert.swift */; };
 		0BCC8B7F27C8C14000F029D2 /* ArtistExplorerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B7E27C8C14000F029D2 /* ArtistExplorerModel.swift */; };
 		0BCC8B8127C8C1C200F029D2 /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B8027C8C1C200F029D2 /* ExploreViewModel.swift */; };
 		0BCC8B8427C8C41100F029D2 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B8327C8C41100F029D2 /* AuthController.swift */; };
@@ -54,7 +53,6 @@
 		0B7AECD227CCE16900D23D4A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0BA6FD6227CEA17000396D28 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		0BA6FD6427CEA1F000396D28 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
-		0BA6FD6627CEA24C00396D28 /* AppAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAlert.swift; sourceTree = "<group>"; };
 		0BCC8B7E27C8C14000F029D2 /* ArtistExplorerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistExplorerModel.swift; sourceTree = "<group>"; };
 		0BCC8B8027C8C1C200F029D2 /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExploreViewModel.swift; path = "free-tunes/ViewModels/ExploreViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		0BCC8B8327C8C41100F029D2 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
@@ -109,7 +107,6 @@
 				0BCC8B8C27C8CC9C00F029D2 /* ApiImageLoader.swift */,
 				0BA6FD6227CEA17000396D28 /* CustomLabel.swift */,
 				0BA6FD6427CEA1F000396D28 /* CustomTextField.swift */,
-				0BA6FD6627CEA24C00396D28 /* AppAlert.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -379,7 +376,6 @@
 				0BCC8B8627C8C7F000F029D2 /* ApiCaller.swift in Sources */,
 				0BCC8B8127C8C1C200F029D2 /* ExploreViewModel.swift in Sources */,
 				0BEAF48627C79F7700C0590D /* AppDelegate.swift in Sources */,
-				0BA6FD6727CEA24C00396D28 /* AppAlert.swift in Sources */,
 				0BEAF48827C79F7700C0590D /* SceneDelegate.swift in Sources */,
 				0B5F54BC27CC6D590035FE46 /* TopArtistsCell.swift in Sources */,
 				0BA6FD6327CEA17000396D28 /* CustomLabel.swift in Sources */,

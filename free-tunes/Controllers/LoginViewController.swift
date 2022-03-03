@@ -35,8 +35,7 @@ class LoginViewController: UIViewController {
 
     func loginRequest() -> Bool {
         if usernameInput.text != "Admin" || passwordInput.text != "TestPass123" {
-            let alert = UIAlertController()
-            alert.displayErrorAlert(alertTitle: "Invalid credentials.",
+            displayErrorAlert(alertTitle: "Invalid credentials.",
                                     alertMessage: "Incorrect Username or Password.",
                                     alertActionTitle: "Try again" ,
                                     alertDelegate: self)
@@ -76,5 +75,19 @@ extension LoginViewController: UITextFieldDelegate {
         if name == "Username" || name == "Password"{
             textField.layer.borderColor = (UIColor.lightGray).cgColor
         }
+    }
+}
+
+extension UIViewController{
+
+    func displayErrorAlert(alertTitle: String,
+                           alertMessage: String,
+                           alertActionTitle: String,
+                           alertDelegate: UIViewController) {
+        let alert = UIAlertController(title: alertTitle,
+                                      message: alertMessage,
+                                      preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: alertActionTitle, style: UIAlertAction.Style.default, handler: nil))
+        alertDelegate.present(alert, animated: true, completion: nil)
     }
 }
