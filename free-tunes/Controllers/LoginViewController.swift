@@ -63,7 +63,7 @@ extension LoginViewController: UITextFieldDelegate {
             return
         }
         if name == "Username" || name == "Password" {
-            textField.layer.borderColor = UIColor(named: "AppPrimaryColor")?.cgColor
+            textField.applyPrimaryColorOutline()
         }
 
     }
@@ -73,12 +73,12 @@ extension LoginViewController: UITextFieldDelegate {
             return
         }
         if name == "Username" || name == "Password"{
-            textField.layer.borderColor = (UIColor.lightGray).cgColor
+            textField.applyDefaultStyle(withName: nil)
         }
     }
 }
 
-extension UIViewController{
+extension UIViewController {
 
     func displayErrorAlert(alertTitle: String,
                            alertMessage: String,
