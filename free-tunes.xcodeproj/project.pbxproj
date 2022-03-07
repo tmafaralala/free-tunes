@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B30D31F27D5DE9500A5DD77 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B30D31E27D5DE9500A5DD77 /* CustomViewController.swift */; };
 		0B5F54BA27CC57D10035FE46 /* ArtistExplorerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F54B927CC57D10035FE46 /* ArtistExplorerViewController.swift */; };
 		0B5F54BC27CC6D590035FE46 /* TopArtistsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F54BB27CC6D590035FE46 /* TopArtistsCell.swift */; };
 		0B7AECD127CCE00E00D23D4A /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7AECD027CCE00E00D23D4A /* OnBoardingViewController.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B30D31E27D5DE9500A5DD77 /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		0B5F54B927CC57D10035FE46 /* ArtistExplorerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistExplorerViewController.swift; sourceTree = "<group>"; };
 		0B5F54BB27CC6D590035FE46 /* TopArtistsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopArtistsCell.swift; sourceTree = "<group>"; };
 		0B7AECD027CCE00E00D23D4A /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				0BCC8B8C27C8CC9C00F029D2 /* ApiImageLoader.swift */,
 				0BA6FD6227CEA17000396D28 /* CustomLabel.swift */,
 				0BA6FD6427CEA1F000396D28 /* CustomTextField.swift */,
+				0B30D31E27D5DE9500A5DD77 /* CustomViewController.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				0B5F54BC27CC6D590035FE46 /* TopArtistsCell.swift in Sources */,
 				0BA6FD6327CEA17000396D28 /* CustomLabel.swift in Sources */,
 				0BCC8B8827C8C8BA00F029D2 /* Constants.swift in Sources */,
+				0B30D31F27D5DE9500A5DD77 /* CustomViewController.swift in Sources */,
 				0BCC8B8D27C8CC9C00F029D2 /* ApiImageLoader.swift in Sources */,
 				0B7AECD127CCE00E00D23D4A /* OnBoardingViewController.swift in Sources */,
 			);
