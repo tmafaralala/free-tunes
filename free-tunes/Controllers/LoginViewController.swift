@@ -9,7 +9,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var headerText: UILabel!
+    @IBOutlet private weak var headerText: UILabel!
     @IBOutlet private weak var  usernameInput: UITextField!
     @IBOutlet private weak var passwordInput: UITextField!
 
