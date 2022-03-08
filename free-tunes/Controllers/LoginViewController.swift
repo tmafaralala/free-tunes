@@ -25,8 +25,16 @@ class LoginViewController: UIViewController {
     }
 
     func setupInputFields() {
+        setupUsernamInputField()
+        setupPasswordInputField()
+    }
+    
+    func setupUsernamInputField() {
         usernameInput.applyDefaultStyle(withName: "Username")
         usernameInput.delegate = self
+    }
+    
+    func setupPasswordInputField() {
         passwordInput.applyDefaultStyle(withName: "Password")
         passwordInput.delegate = self
     }
