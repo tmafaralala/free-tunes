@@ -10,8 +10,8 @@ import UIKit
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var headerText: UILabel!
-    @IBOutlet weak var usernameInput: UITextField!
-    @IBOutlet weak var passwordInput: UITextField!
+    @IBOutlet private weak var  usernameInput: UITextField!
+    @IBOutlet private weak var passwordInput: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,24 +33,38 @@ class LoginViewController: UIViewController {
         passwordInput.delegate = self
     }
 
-    func loginRequest() -> Bool {
-        if usernameInput.text != "Admin" || passwordInput.text != "TestPass123" {
-            displayErrorAlert(alertTitle: "Invalid credentials.",
-                                    alertMessage: "Incorrect Username or Password.",
-                                    alertActionTitle: "Try again" ,
-                                    alertDelegate: self)
+    func login(username: String?, password: String?) -> Bool {
+        guard let logInUsername = username, let logInPassword = password else {
+            return false
+        }
+        return checkCredentials(username: logInUsername, password: logInPassword)
+    }
+
+    func checkCredentials(username: String?, password: String?) -> Bool {
+        if username != "Admin" || password != "TestPass123" {
             return false
         }
         return true
     }
 
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-
+    func checkTextFieldData() -> Bool {
         if usernameInput.text != "" && passwordInput.text != "" {
-            return loginRequest()
+            return true
         }
+        emptyTextFields()
+        return false
+    }
+
+    func emptyTextFields() {
         usernameInput.emptyFieldError()
         passwordInput.emptyFieldError()
+    }
+
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+
+        if checkTextFieldData() {
+            return login(username: usernameInput.text, password: passwordInput.text)
+        }
         return false
     }
 
@@ -77,5 +91,3 @@ extension LoginViewController: UITextFieldDelegate {
         }
     }
 }
-
-
