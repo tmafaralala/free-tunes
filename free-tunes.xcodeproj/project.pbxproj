@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B30D31F27D5DE9500A5DD77 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B30D31E27D5DE9500A5DD77 /* CustomViewController.swift */; };
+		0B30D31F27D5DE9500A5DD77 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B30D31E27D5DE9500A5DD77 /* UIViewControllerExtension.swift */; };
 		0B5F54BA27CC57D10035FE46 /* ArtistExplorerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F54B927CC57D10035FE46 /* ArtistExplorerViewController.swift */; };
 		0B5F54BC27CC6D590035FE46 /* TopArtistsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F54BB27CC6D590035FE46 /* TopArtistsCell.swift */; };
 		0B7AECD127CCE00E00D23D4A /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7AECD027CCE00E00D23D4A /* OnBoardingViewController.swift */; };
 		0B7AECD327CCE16900D23D4A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7AECD227CCE16900D23D4A /* LoginViewController.swift */; };
-		0BA6FD6327CEA17000396D28 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA6FD6227CEA17000396D28 /* CustomLabel.swift */; };
-		0BA6FD6527CEA1F000396D28 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA6FD6427CEA1F000396D28 /* CustomTextField.swift */; };
+		0BA6FD6327CEA17000396D28 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA6FD6227CEA17000396D28 /* UILabelExtension.swift */; };
+		0BA6FD6527CEA1F000396D28 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA6FD6427CEA1F000396D28 /* UITextFieldExtension.swift */; };
 		0BCC8B7F27C8C14000F029D2 /* ArtistExplorerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B7E27C8C14000F029D2 /* ArtistExplorerModel.swift */; };
 		0BCC8B8127C8C1C200F029D2 /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B8027C8C1C200F029D2 /* ExploreViewModel.swift */; };
 		0BCC8B8427C8C41100F029D2 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B8327C8C41100F029D2 /* AuthController.swift */; };
 		0BCC8B8627C8C7F000F029D2 /* ApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B8527C8C7F000F029D2 /* ApiCaller.swift */; };
 		0BCC8B8827C8C8BA00F029D2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B8727C8C8BA00F029D2 /* Constants.swift */; };
-		0BCC8B8D27C8CC9C00F029D2 /* ApiImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B8C27C8CC9C00F029D2 /* ApiImageLoader.swift */; };
+		0BCC8B8D27C8CC9C00F029D2 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B8C27C8CC9C00F029D2 /* UIImageViewExtension.swift */; };
 		0BEAF48627C79F7700C0590D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEAF48527C79F7700C0590D /* AppDelegate.swift */; };
 		0BEAF48827C79F7700C0590D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEAF48727C79F7700C0590D /* SceneDelegate.swift */; };
 		0BEAF48D27C79F7700C0590D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BEAF48B27C79F7700C0590D /* Main.storyboard */; };
@@ -48,19 +48,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0B30D31E27D5DE9500A5DD77 /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
+		0B30D31E27D5DE9500A5DD77 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		0B5F54B927CC57D10035FE46 /* ArtistExplorerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistExplorerViewController.swift; sourceTree = "<group>"; };
 		0B5F54BB27CC6D590035FE46 /* TopArtistsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopArtistsCell.swift; sourceTree = "<group>"; };
 		0B7AECD027CCE00E00D23D4A /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		0B7AECD227CCE16900D23D4A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		0BA6FD6227CEA17000396D28 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
-		0BA6FD6427CEA1F000396D28 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		0BA6FD6227CEA17000396D28 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
+		0BA6FD6427CEA1F000396D28 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		0BCC8B7E27C8C14000F029D2 /* ArtistExplorerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistExplorerModel.swift; sourceTree = "<group>"; };
 		0BCC8B8027C8C1C200F029D2 /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExploreViewModel.swift; path = "free-tunes/ViewModels/ExploreViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		0BCC8B8327C8C41100F029D2 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 		0BCC8B8527C8C7F000F029D2 /* ApiCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCaller.swift; sourceTree = "<group>"; };
 		0BCC8B8727C8C8BA00F029D2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		0BCC8B8C27C8CC9C00F029D2 /* ApiImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiImageLoader.swift; sourceTree = "<group>"; };
+		0BCC8B8C27C8CC9C00F029D2 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		0BEAF48227C79F7700C0590D /* free-tunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "free-tunes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BEAF48527C79F7700C0590D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BEAF48727C79F7700C0590D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,16 +100,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B8F7A4327DE561A00642F60 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0B30D31E27D5DE9500A5DD77 /* UIViewControllerExtension.swift */,
+				0BA6FD6427CEA1F000396D28 /* UITextFieldExtension.swift */,
+				0BA6FD6227CEA17000396D28 /* UILabelExtension.swift */,
+				0BCC8B8C27C8CC9C00F029D2 /* UIImageViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		0BCC8B7A27C8BF0F00F029D2 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				0BCC8B8327C8C41100F029D2 /* AuthController.swift */,
 				0BCC8B8527C8C7F000F029D2 /* ApiCaller.swift */,
 				0BCC8B8727C8C8BA00F029D2 /* Constants.swift */,
-				0BCC8B8C27C8CC9C00F029D2 /* ApiImageLoader.swift */,
-				0BA6FD6227CEA17000396D28 /* CustomLabel.swift */,
-				0BA6FD6427CEA1F000396D28 /* CustomTextField.swift */,
-				0B30D31E27D5DE9500A5DD77 /* CustomViewController.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -155,6 +162,7 @@
 		0BEAF48427C79F7700C0590D /* free-tunes */ = {
 			isa = PBXGroup;
 			children = (
+				0B8F7A4327DE561A00642F60 /* Extensions */,
 				0BCC8B7B27C8BF3D00F029D2 /* Config */,
 				0BCC8B7A27C8BF0F00F029D2 /* Utilities */,
 				0BEAF4B927C7A13600C0590D /* Resources */,
@@ -371,7 +379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BA6FD6527CEA1F000396D28 /* CustomTextField.swift in Sources */,
+				0BA6FD6527CEA1F000396D28 /* UITextFieldExtension.swift in Sources */,
 				0B7AECD327CCE16900D23D4A /* LoginViewController.swift in Sources */,
 				0BCC8B7F27C8C14000F029D2 /* ArtistExplorerModel.swift in Sources */,
 				0B5F54BA27CC57D10035FE46 /* ArtistExplorerViewController.swift in Sources */,
@@ -381,10 +389,10 @@
 				0BEAF48627C79F7700C0590D /* AppDelegate.swift in Sources */,
 				0BEAF48827C79F7700C0590D /* SceneDelegate.swift in Sources */,
 				0B5F54BC27CC6D590035FE46 /* TopArtistsCell.swift in Sources */,
-				0BA6FD6327CEA17000396D28 /* CustomLabel.swift in Sources */,
+				0BA6FD6327CEA17000396D28 /* UILabelExtension.swift in Sources */,
 				0BCC8B8827C8C8BA00F029D2 /* Constants.swift in Sources */,
-				0B30D31F27D5DE9500A5DD77 /* CustomViewController.swift in Sources */,
-				0BCC8B8D27C8CC9C00F029D2 /* ApiImageLoader.swift in Sources */,
+				0B30D31F27D5DE9500A5DD77 /* UIViewControllerExtension.swift in Sources */,
+				0BCC8B8D27C8CC9C00F029D2 /* UIImageViewExtension.swift in Sources */,
 				0B7AECD127CCE00E00D23D4A /* OnBoardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
