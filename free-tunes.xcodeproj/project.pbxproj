@@ -16,10 +16,11 @@
 		0BA6FD6527CEA1F000396D28 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA6FD6427CEA1F000396D28 /* UITextFieldExtension.swift */; };
 		0BCC8B7F27C8C14000F029D2 /* ArtistExplorerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B7E27C8C14000F029D2 /* ArtistExplorerModel.swift */; };
 		0BCC8B8127C8C1C200F029D2 /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B8027C8C1C200F029D2 /* ExploreViewModel.swift */; };
-		0BCC8B8427C8C41100F029D2 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B8327C8C41100F029D2 /* AuthController.swift */; };
 		0BCC8B8627C8C7F000F029D2 /* ApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B8527C8C7F000F029D2 /* ApiCaller.swift */; };
 		0BCC8B8827C8C8BA00F029D2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B8727C8C8BA00F029D2 /* Constants.swift */; };
 		0BCC8B8D27C8CC9C00F029D2 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B8C27C8CC9C00F029D2 /* UIImageViewExtension.swift */; };
+		0BE2C39327DE5E95007F3FDD /* TrackCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE2C39127DE5E95007F3FDD /* TrackCollectionViewCell.swift */; };
+		0BE2C39427DE5E95007F3FDD /* TrackCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BE2C39227DE5E95007F3FDD /* TrackCollectionViewCell.xib */; };
 		0BEAF48627C79F7700C0590D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEAF48527C79F7700C0590D /* AppDelegate.swift */; };
 		0BEAF48827C79F7700C0590D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEAF48727C79F7700C0590D /* SceneDelegate.swift */; };
 		0BEAF48D27C79F7700C0590D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BEAF48B27C79F7700C0590D /* Main.storyboard */; };
@@ -57,10 +58,11 @@
 		0BA6FD6427CEA1F000396D28 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		0BCC8B7E27C8C14000F029D2 /* ArtistExplorerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistExplorerModel.swift; sourceTree = "<group>"; };
 		0BCC8B8027C8C1C200F029D2 /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExploreViewModel.swift; path = "free-tunes/ViewModels/ExploreViewModel.swift"; sourceTree = SOURCE_ROOT; };
-		0BCC8B8327C8C41100F029D2 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 		0BCC8B8527C8C7F000F029D2 /* ApiCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCaller.swift; sourceTree = "<group>"; };
 		0BCC8B8727C8C8BA00F029D2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0BCC8B8C27C8CC9C00F029D2 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		0BE2C39127DE5E95007F3FDD /* TrackCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCollectionViewCell.swift; sourceTree = "<group>"; };
+		0BE2C39227DE5E95007F3FDD /* TrackCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackCollectionViewCell.xib; sourceTree = "<group>"; };
 		0BEAF48227C79F7700C0590D /* free-tunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "free-tunes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BEAF48527C79F7700C0590D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BEAF48727C79F7700C0590D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,7 +116,6 @@
 		0BCC8B7A27C8BF0F00F029D2 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				0BCC8B8327C8C41100F029D2 /* AuthController.swift */,
 				0BCC8B8527C8C7F000F029D2 /* ApiCaller.swift */,
 				0BCC8B8727C8C8BA00F029D2 /* Constants.swift */,
 			);
@@ -202,6 +203,7 @@
 		0BEAF4B727C7A05700C0590D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0BE2C39127DE5E95007F3FDD /* TrackCollectionViewCell.swift */,
 				0B5F54B927CC57D10035FE46 /* ArtistExplorerViewController.swift */,
 				0B5F54BB27CC6D590035FE46 /* TopArtistsCell.swift */,
 				0B7AECD027CCE00E00D23D4A /* OnBoardingViewController.swift */,
@@ -215,6 +217,7 @@
 			children = (
 				0BEAF48B27C79F7700C0590D /* Main.storyboard */,
 				0BEAF49027C79F7B00C0590D /* LaunchScreen.storyboard */,
+				0BE2C39227DE5E95007F3FDD /* TrackCollectionViewCell.xib */,
 			);
 			path = UserInterfaces;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BE2C39427DE5E95007F3FDD /* TrackCollectionViewCell.xib in Resources */,
 				0BEAF49227C79F7B00C0590D /* LaunchScreen.storyboard in Resources */,
 				0BEAF48F27C79F7B00C0590D /* Assets.xcassets in Resources */,
 				0BEAF48D27C79F7700C0590D /* Main.storyboard in Resources */,
@@ -383,7 +387,6 @@
 				0B7AECD327CCE16900D23D4A /* LoginViewController.swift in Sources */,
 				0BCC8B7F27C8C14000F029D2 /* ArtistExplorerModel.swift in Sources */,
 				0B5F54BA27CC57D10035FE46 /* ArtistExplorerViewController.swift in Sources */,
-				0BCC8B8427C8C41100F029D2 /* AuthController.swift in Sources */,
 				0BCC8B8627C8C7F000F029D2 /* ApiCaller.swift in Sources */,
 				0BCC8B8127C8C1C200F029D2 /* ExploreViewModel.swift in Sources */,
 				0BEAF48627C79F7700C0590D /* AppDelegate.swift in Sources */,
@@ -393,6 +396,7 @@
 				0BCC8B8827C8C8BA00F029D2 /* Constants.swift in Sources */,
 				0B30D31F27D5DE9500A5DD77 /* UIViewControllerExtension.swift in Sources */,
 				0BCC8B8D27C8CC9C00F029D2 /* UIImageViewExtension.swift in Sources */,
+				0BE2C39327DE5E95007F3FDD /* TrackCollectionViewCell.swift in Sources */,
 				0B7AECD127CCE00E00D23D4A /* OnBoardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
