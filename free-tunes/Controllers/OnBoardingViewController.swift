@@ -9,10 +9,10 @@ import UIKit
 
 class OnBoardingViewController: UIViewController {
 
-// MARK: - Interface Builder Outlets
+//  MARK: - Interface Builder Outlets
     @IBOutlet weak var headerText: UILabel!
    
-// MARK: - Runtime Methods
+//  MARK: - Runtime Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         headerText.buildCustomLabel(labelFirstPart: "free", labelSecondPart: "Tunes")
