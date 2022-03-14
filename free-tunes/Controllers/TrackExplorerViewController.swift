@@ -11,7 +11,7 @@ import AVFoundation
 class TrackExplorerViewController: UIViewController {
     
 // MARK: - Interface Builder Outlets
-    @IBOutlet weak var trackCollectionView: UICollectionView!
+    @IBOutlet private weak var trackCollectionView: UICollectionView!
     
     private lazy var exploreViewModel = TrackExplorerViewModel()
     var looper: AVPlayerLooper!

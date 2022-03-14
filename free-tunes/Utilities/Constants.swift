@@ -8,7 +8,6 @@
 import Foundation
 
 struct Constants {
-
     static let artistExploreContentUrl = URL(string:
     "https://api.deezer.com/chart&format=json")
 }
