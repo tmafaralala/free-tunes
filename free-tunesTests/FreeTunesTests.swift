@@ -1,6 +1,6 @@
 //
-//  free_tunesTests.swift
-//  free-tunesTests
+//  Free_tunesTests.swift
+//  Free-tunesTests
 //
 //  Created by Tshwarelo Mafaralala on 2022/02/24.
 //

@@ -1,6 +1,6 @@
 //
 //  LoginViewController.swift
-//  free-tunes
+//  Free-tunes
 //
 //  Created by Tshwarelo Mafaralala on 2022/02/28.
 //
@@ -69,7 +69,14 @@ class LoginViewController: UIViewController {
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
 
         if checkTextFieldData() {
-            return login(username: usernameInput.text, password: passwordInput.text)
+            let loginsession = login(username: usernameInput.text, password: passwordInput.text)
+            if !loginsession {
+                displayErrorAlert(alertTitle: "Invalid credentials.",
+                                  alertMessage: "Incorrect username or password.",
+                                  alertActionTitle: "Try again",
+                                  alertDelegate: self)
+            }
+            return loginsession
         }
         return false
     }
