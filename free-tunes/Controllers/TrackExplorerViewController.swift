@@ -14,8 +14,8 @@ class TrackExplorerViewController: UIViewController {
     @IBOutlet private weak var trackCollectionView: UICollectionView!
     
     private lazy var exploreViewModel = TrackExplorerViewModel()
-    var looper: AVPlayerLooper!
-    var player: AVQueuePlayer!
+    private var looper: AVPlayerLooper!
+    private var player: AVQueuePlayer!
 
 // MARK: - Runtime Methods
     override func viewDidLoad() {
