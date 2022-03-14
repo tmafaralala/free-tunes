@@ -8,14 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0B30D31F27D5DE9500A5DD77 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B30D31E27D5DE9500A5DD77 /* UIViewControllerExtension.swift */; };
-		0B5F54BA27CC57D10035FE46 /* ArtistExplorerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F54B927CC57D10035FE46 /* ArtistExplorerViewController.swift */; };
-		0B5F54BC27CC6D590035FE46 /* TopArtistsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F54BB27CC6D590035FE46 /* TopArtistsCell.swift */; };
+		0B5F54BA27CC57D10035FE46 /* TrackExplorerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F54B927CC57D10035FE46 /* TrackExplorerViewController.swift */; };
 		0B7AECD127CCE00E00D23D4A /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7AECD027CCE00E00D23D4A /* OnBoardingViewController.swift */; };
 		0B7AECD327CCE16900D23D4A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7AECD227CCE16900D23D4A /* LoginViewController.swift */; };
 		0BA6FD6327CEA17000396D28 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA6FD6227CEA17000396D28 /* UILabelExtension.swift */; };
 		0BA6FD6527CEA1F000396D28 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA6FD6427CEA1F000396D28 /* UITextFieldExtension.swift */; };
-		0BCC8B7F27C8C14000F029D2 /* ArtistExplorerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B7E27C8C14000F029D2 /* ArtistExplorerModel.swift */; };
-		0BCC8B8127C8C1C200F029D2 /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B8027C8C1C200F029D2 /* ExploreViewModel.swift */; };
+		0BCC8B7F27C8C14000F029D2 /* TracksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B7E27C8C14000F029D2 /* TracksModel.swift */; };
+		0BCC8B8127C8C1C200F029D2 /* TrackExplorerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B8027C8C1C200F029D2 /* TrackExplorerViewModel.swift */; };
 		0BCC8B8627C8C7F000F029D2 /* ApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B8527C8C7F000F029D2 /* ApiCaller.swift */; };
 		0BCC8B8827C8C8BA00F029D2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B8727C8C8BA00F029D2 /* Constants.swift */; };
 		0BCC8B8D27C8CC9C00F029D2 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B8C27C8CC9C00F029D2 /* UIImageViewExtension.swift */; };
@@ -28,7 +27,7 @@
 		0BEAF49227C79F7B00C0590D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BEAF49027C79F7B00C0590D /* LaunchScreen.storyboard */; };
 		0BEAF49D27C79F7C00C0590D /* FreeTunesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEAF49C27C79F7C00C0590D /* FreeTunesTests.swift */; };
 		0BEAF4A727C79F7C00C0590D /* FreeTunesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEAF4A627C79F7C00C0590D /* FreeTunesUITests.swift */; };
-		0BEAF4A927C79F7C00C0590D /* FreeTunesUITestsLaunchTests in Sources */ = {isa = PBXBuildFile; fileRef = 0BEAF4A827C79F7C00C0590D /* FreeTunesUITestsLaunchTests */; };
+		0BEAF4A927C79F7C00C0590D /* FreeTunesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEAF4A827C79F7C00C0590D /* FreeTunesUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,14 +49,13 @@
 
 /* Begin PBXFileReference section */
 		0B30D31E27D5DE9500A5DD77 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
-		0B5F54B927CC57D10035FE46 /* ArtistExplorerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistExplorerViewController.swift; sourceTree = "<group>"; };
-		0B5F54BB27CC6D590035FE46 /* TopArtistsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopArtistsCell.swift; sourceTree = "<group>"; };
+		0B5F54B927CC57D10035FE46 /* TrackExplorerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackExplorerViewController.swift; sourceTree = "<group>"; };
 		0B7AECD027CCE00E00D23D4A /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		0B7AECD227CCE16900D23D4A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0BA6FD6227CEA17000396D28 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		0BA6FD6427CEA1F000396D28 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
-		0BCC8B7E27C8C14000F029D2 /* ArtistExplorerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistExplorerModel.swift; sourceTree = "<group>"; };
-		0BCC8B8027C8C1C200F029D2 /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExploreViewModel.swift; path = "free-tunes/ViewModels/ExploreViewModel.swift"; sourceTree = SOURCE_ROOT; };
+		0BCC8B7E27C8C14000F029D2 /* TracksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksModel.swift; sourceTree = "<group>"; };
+		0BCC8B8027C8C1C200F029D2 /* TrackExplorerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrackExplorerViewModel.swift; path = "free-tunes/ViewModels/TrackExplorerViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		0BCC8B8527C8C7F000F029D2 /* ApiCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCaller.swift; sourceTree = "<group>"; };
 		0BCC8B8727C8C8BA00F029D2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0BCC8B8C27C8CC9C00F029D2 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
@@ -74,7 +72,7 @@
 		0BEAF49C27C79F7C00C0590D /* FreeTunesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTunesTests.swift; sourceTree = "<group>"; };
 		0BEAF4A227C79F7C00C0590D /* free-tunesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "free-tunesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BEAF4A627C79F7C00C0590D /* FreeTunesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTunesUITests.swift; sourceTree = "<group>"; };
-		0BEAF4A827C79F7C00C0590D /* FreeTunesUITestsLaunchTests */ = {isa = PBXFileReference; lastKnownFileType = text; path = FreeTunesUITestsLaunchTests; sourceTree = "<group>"; };
+		0BEAF4A827C79F7C00C0590D /* FreeTunesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTunesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +133,7 @@
 		0BCC8B8227C8C21E00F029D2 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				0BCC8B8027C8C1C200F029D2 /* ExploreViewModel.swift */,
+				0BCC8B8027C8C1C200F029D2 /* TrackExplorerViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -187,7 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				0BEAF4A627C79F7C00C0590D /* FreeTunesUITests.swift */,
-				0BEAF4A827C79F7C00C0590D /* FreeTunesUITestsLaunchTests */,
+				0BEAF4A827C79F7C00C0590D /* FreeTunesUITestsLaunchTests.swift */,
 			);
 			path = "free-tunesUITests";
 			sourceTree = "<group>";
@@ -195,7 +193,7 @@
 		0BEAF4B627C7A04E00C0590D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0BCC8B7E27C8C14000F029D2 /* ArtistExplorerModel.swift */,
+				0BCC8B7E27C8C14000F029D2 /* TracksModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -204,8 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				0BE2C39127DE5E95007F3FDD /* TrackCollectionViewCell.swift */,
-				0B5F54B927CC57D10035FE46 /* ArtistExplorerViewController.swift */,
-				0B5F54BB27CC6D590035FE46 /* TopArtistsCell.swift */,
+				0B5F54B927CC57D10035FE46 /* TrackExplorerViewController.swift */,
 				0B7AECD027CCE00E00D23D4A /* OnBoardingViewController.swift */,
 				0B7AECD227CCE16900D23D4A /* LoginViewController.swift */,
 			);
@@ -385,13 +382,12 @@
 			files = (
 				0BA6FD6527CEA1F000396D28 /* UITextFieldExtension.swift in Sources */,
 				0B7AECD327CCE16900D23D4A /* LoginViewController.swift in Sources */,
-				0BCC8B7F27C8C14000F029D2 /* ArtistExplorerModel.swift in Sources */,
-				0B5F54BA27CC57D10035FE46 /* ArtistExplorerViewController.swift in Sources */,
+				0BCC8B7F27C8C14000F029D2 /* TracksModel.swift in Sources */,
+				0B5F54BA27CC57D10035FE46 /* TrackExplorerViewController.swift in Sources */,
 				0BCC8B8627C8C7F000F029D2 /* ApiCaller.swift in Sources */,
-				0BCC8B8127C8C1C200F029D2 /* ExploreViewModel.swift in Sources */,
+				0BCC8B8127C8C1C200F029D2 /* TrackExplorerViewModel.swift in Sources */,
 				0BEAF48627C79F7700C0590D /* AppDelegate.swift in Sources */,
 				0BEAF48827C79F7700C0590D /* SceneDelegate.swift in Sources */,
-				0B5F54BC27CC6D590035FE46 /* TopArtistsCell.swift in Sources */,
 				0BA6FD6327CEA17000396D28 /* UILabelExtension.swift in Sources */,
 				0BCC8B8827C8C8BA00F029D2 /* Constants.swift in Sources */,
 				0B30D31F27D5DE9500A5DD77 /* UIViewControllerExtension.swift in Sources */,
@@ -413,7 +409,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BEAF4A927C79F7C00C0590D /* FreeTunesUITestsLaunchTests in Sources */,
+				0BEAF4A927C79F7C00C0590D /* FreeTunesUITestsLaunchTests.swift in Sources */,
 				0BEAF4A727C79F7C00C0590D /* FreeTunesUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -578,9 +574,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "free-tunes/Config/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = FreeTunes;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -605,9 +603,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "free-tunes/Config/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = FreeTunes;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
