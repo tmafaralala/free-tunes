@@ -9,12 +9,12 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-//  MARK: - Interface Builder Outlets
+// MARK: - Interface Builder Outlets
     @IBOutlet private weak var headerText: UILabel!
     @IBOutlet private weak var  usernameInput: UITextField!
     @IBOutlet private weak var passwordInput: UITextField!
 
-//  MARK: - Runtime Methods
+// MARK: - Runtime Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         setupInputFields()
@@ -34,7 +34,7 @@ class LoginViewController: UIViewController {
         return false
     }
 
-//  MARK: - InputFields Setup
+// MARK: - InputFields Setup
     func setupInputFields() {
         setupUsernamInputField()
         setupPasswordInputField()
@@ -50,7 +50,7 @@ class LoginViewController: UIViewController {
         passwordInput.delegate = self
     }
 
-//  MARK: - Input Validation
+// MARK: - Input Validation
     func checkTextFieldData() -> Bool {
         if usernameInput.text != "" && passwordInput.text != "" {
             return true
