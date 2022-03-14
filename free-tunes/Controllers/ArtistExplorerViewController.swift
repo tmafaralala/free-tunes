@@ -1,6 +1,6 @@
 //
 //  CategoriesViewController.swift
-//  free-tunes
+//  Free-tunes
 //
 //  Created by Tshwarelo Mafaralala on 2022/02/28.
 //
