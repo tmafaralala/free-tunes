@@ -10,7 +10,7 @@ import UIKit
 class OnBoardingViewController: UIViewController {
 
 // MARK: - Interface Builder Outlets
-    @IBOutlet private weak var headerText: UILabel!
+    @IBOutlet  weak var headerText: UILabel!
    
 // MARK: - Runtime Methods
     override func viewDidLoad() {
