@@ -51,7 +51,7 @@ class LoginViewController: UIViewController {
 
 // MARK: - Input Validation
     func checkTextFieldData() -> Bool {
-        if usernameInput.state.isEmpty && passwordInput.state.isEmpty {
+        if usernameInput.isEmpty && passwordInput.isEmpty {
             emptyTextFields()
             return false
         }
