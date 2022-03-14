@@ -9,20 +9,17 @@ import UIKit
 
 class TrackCollectionViewCell: UICollectionViewCell {
 
-//  MARK: - Interface Builder Outlets
+// MARK: - Interface Builder Outlets
     @IBOutlet private weak var trackCover: UIImageView!
     @IBOutlet private weak var artistName: UILabel!
     @IBOutlet private weak var trackName: UILabel!
     
-    func setArtistName(artistName: String) {
-        self.artistName.text = artistName
-    }
-    
-    func setTrackName(trackName: String) {
+    func setupTrackCell(albumCover: String, trackName: String, artistName: String) {
+        guard let albumCoverUrl = URL(string: albumCover) else {
+            return
+        }
         self.trackName.text = trackName
-    }
-    
-    func setTrackCover(url: URL) {
-        self.trackCover.loadArtistCover(url: url)
+        self.trackCover.loadArtistCover(url: albumCoverUrl)
+        self.artistName.text = artistName
     }
 }

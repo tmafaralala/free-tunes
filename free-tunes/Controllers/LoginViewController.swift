@@ -22,12 +22,11 @@ class LoginViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
         super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-
         if checkTextFieldData() {
             return getAuthenticator().login(username: usernameInput.text, password: passwordInput.text)
         }
@@ -52,11 +51,12 @@ class LoginViewController: UIViewController {
 
 // MARK: - Input Validation
     func checkTextFieldData() -> Bool {
-        if usernameInput.text != "" && passwordInput.text != "" {
-            return true
+        if usernameInput.state.isEmpty && passwordInput.state.isEmpty {
+            emptyTextFields()
+            return false
         }
-        emptyTextFields()
-        return false
+        
+        return true
     }
 
     func emptyTextFields() {

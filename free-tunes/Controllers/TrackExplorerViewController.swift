@@ -68,8 +68,10 @@ extension TrackExplorerViewController: UICollectionViewDelegate, UICollectionVie
         else {
             return UICollectionViewCell()
         }
-        setupTrackCell(cell: cell,
-            index: indexPath.item)
+        
+        cell.setupTrackCell(albumCover: exploreViewModel.getTrack(atIndex: indexPath.item).album.cover,
+                            trackName: exploreViewModel.getTrack(atIndex: indexPath.item).title,
+                            artistName: exploreViewModel.getTrack(atIndex: indexPath.item).artist.name)
         return cell
     }
     
@@ -100,15 +102,6 @@ extension TrackExplorerViewController: UICollectionViewDelegate, UICollectionVie
     }
     
 // MARK: - Collection View Custom Methods
-    func setupTrackCell(cell: TrackCollectionViewCell?, index: Int ) {
-        guard let currentCell = cell, let albumCoverUrl = URL(string: exploreViewModel.getTrack(atIndex: index).album.cover) else {
-            return
-        }
-        currentCell.setTrackName(trackName: exploreViewModel.getTrack(atIndex: index).title)
-        currentCell.setTrackCover(url: albumCoverUrl)
-        currentCell.setArtistName(artistName: exploreViewModel.getTrack(atIndex: index).artist.name)
-    }
-    
     func loadRadio(radioURL: String) {
         guard let url = URL.init(string: radioURL) else { return }
         let playerItem = AVPlayerItem.init(url: url)
