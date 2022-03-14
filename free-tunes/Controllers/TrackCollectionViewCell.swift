@@ -10,9 +10,9 @@ import UIKit
 class TrackCollectionViewCell: UICollectionViewCell {
 
 //  MARK: - Interface Builder Outlets
-    @IBOutlet weak var trackCover: UIImageView!
-    @IBOutlet weak var artistName: UILabel!
-    @IBOutlet weak var trackName: UILabel!
+    @IBOutlet private weak var trackCover: UIImageView!
+    @IBOutlet private weak var artistName: UILabel!
+    @IBOutlet private weak var trackName: UILabel!
     
     func setArtistName(artistName: String) {
         self.artistName.text = artistName
