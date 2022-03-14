@@ -9,10 +9,12 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+//  MARK: - Interface Builder Outlets
     @IBOutlet private weak var headerText: UILabel!
     @IBOutlet private weak var  usernameInput: UITextField!
     @IBOutlet private weak var passwordInput: UITextField!
 
+//  MARK: - Runtime Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         setupInputFields()
@@ -23,7 +25,16 @@ class LoginViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
         super.viewWillAppear(animated)
     }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
 
+        if checkTextFieldData() {
+            return getAuthenticator().login(username: usernameInput.text, password: passwordInput.text)
+        }
+        return false
+    }
+
+//  MARK: - InputFields Setup
     func setupInputFields() {
         setupUsernamInputField()
         setupPasswordInputField()
@@ -39,20 +50,7 @@ class LoginViewController: UIViewController {
         passwordInput.delegate = self
     }
 
-    func login(username: String?, password: String?) -> Bool {
-        guard let logInUsername = username, let logInPassword = password else {
-            return false
-        }
-        return checkCredentials(username: logInUsername, password: logInPassword)
-    }
-
-    func checkCredentials(username: String?, password: String?) -> Bool {
-        if username != "Admin" || password != "TestPass123" {
-            return false
-        }
-        return true
-    }
-
+//  MARK: - Input Validation
     func checkTextFieldData() -> Bool {
         if usernameInput.text != "" && passwordInput.text != "" {
             return true
@@ -66,34 +64,4 @@ class LoginViewController: UIViewController {
         passwordInput.emptyFieldError()
     }
 
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-
-        if checkTextFieldData() {
-            return login(username: usernameInput.text, password: passwordInput.text)
-        }
-        return false
-    }
-
-}
-
-extension LoginViewController: UITextFieldDelegate {
-
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        guard let name = textField.layer.name else {
-            return
-        }
-        if name == "Username" || name == "Password" {
-            textField.applyPrimaryColorOutline()
-        }
-
-    }
-
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        guard let name = textField.layer.name else {
-            return
-        }
-        if name == "Username" || name == "Password"{
-            textField.applyDefaultStyle(withName: nil)
-        }
-    }
 }

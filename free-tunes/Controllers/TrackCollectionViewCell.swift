@@ -9,6 +9,7 @@ import UIKit
 
 class TrackCollectionViewCell: UICollectionViewCell {
 
+//  MARK: - Interface Builder Outlets
     @IBOutlet weak var trackCover: UIImageView!
     @IBOutlet weak var artistName: UILabel!
     @IBOutlet weak var trackName: UILabel!

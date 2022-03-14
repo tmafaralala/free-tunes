@@ -20,6 +20,8 @@
 		0BCC8B8D27C8CC9C00F029D2 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B8C27C8CC9C00F029D2 /* UIImageViewExtension.swift */; };
 		0BE2C39327DE5E95007F3FDD /* TrackCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE2C39127DE5E95007F3FDD /* TrackCollectionViewCell.swift */; };
 		0BE2C39427DE5E95007F3FDD /* TrackCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BE2C39227DE5E95007F3FDD /* TrackCollectionViewCell.xib */; };
+		0BE2C39627DF3945007F3FDD /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE2C39527DF3945007F3FDD /* AuthManager.swift */; };
+		0BE2C39827DF3BAA007F3FDD /* LogInViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE2C39727DF3BAA007F3FDD /* LogInViewControllerExtension.swift */; };
 		0BEAF48627C79F7700C0590D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEAF48527C79F7700C0590D /* AppDelegate.swift */; };
 		0BEAF48827C79F7700C0590D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEAF48727C79F7700C0590D /* SceneDelegate.swift */; };
 		0BEAF48D27C79F7700C0590D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BEAF48B27C79F7700C0590D /* Main.storyboard */; };
@@ -61,6 +63,8 @@
 		0BCC8B8C27C8CC9C00F029D2 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		0BE2C39127DE5E95007F3FDD /* TrackCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCollectionViewCell.swift; sourceTree = "<group>"; };
 		0BE2C39227DE5E95007F3FDD /* TrackCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackCollectionViewCell.xib; sourceTree = "<group>"; };
+		0BE2C39527DF3945007F3FDD /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		0BE2C39727DF3BAA007F3FDD /* LogInViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewControllerExtension.swift; sourceTree = "<group>"; };
 		0BEAF48227C79F7700C0590D /* free-tunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "free-tunes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BEAF48527C79F7700C0590D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BEAF48727C79F7700C0590D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +111,7 @@
 				0BA6FD6427CEA1F000396D28 /* UITextFieldExtension.swift */,
 				0BA6FD6227CEA17000396D28 /* UILabelExtension.swift */,
 				0BCC8B8C27C8CC9C00F029D2 /* UIImageViewExtension.swift */,
+				0BE2C39727DF3BAA007F3FDD /* LogInViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -116,6 +121,7 @@
 			children = (
 				0BCC8B8527C8C7F000F029D2 /* ApiCaller.swift */,
 				0BCC8B8727C8C8BA00F029D2 /* Constants.swift */,
+				0BE2C39527DF3945007F3FDD /* AuthManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -384,11 +390,13 @@
 				0B7AECD327CCE16900D23D4A /* LoginViewController.swift in Sources */,
 				0BCC8B7F27C8C14000F029D2 /* TracksModel.swift in Sources */,
 				0B5F54BA27CC57D10035FE46 /* TrackExplorerViewController.swift in Sources */,
+				0BE2C39627DF3945007F3FDD /* AuthManager.swift in Sources */,
 				0BCC8B8627C8C7F000F029D2 /* ApiCaller.swift in Sources */,
 				0BCC8B8127C8C1C200F029D2 /* TrackExplorerViewModel.swift in Sources */,
 				0BEAF48627C79F7700C0590D /* AppDelegate.swift in Sources */,
 				0BEAF48827C79F7700C0590D /* SceneDelegate.swift in Sources */,
 				0BA6FD6327CEA17000396D28 /* UILabelExtension.swift in Sources */,
+				0BE2C39827DF3BAA007F3FDD /* LogInViewControllerExtension.swift in Sources */,
 				0BCC8B8827C8C8BA00F029D2 /* Constants.swift in Sources */,
 				0B30D31F27D5DE9500A5DD77 /* UIViewControllerExtension.swift in Sources */,
 				0BCC8B8D27C8CC9C00F029D2 /* UIImageViewExtension.swift in Sources */,
