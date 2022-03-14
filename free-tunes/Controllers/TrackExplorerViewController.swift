@@ -10,14 +10,14 @@ import AVFoundation
 
 class TrackExplorerViewController: UIViewController {
     
-//  MARK: - Interface Builder Outlets
+// MARK: - Interface Builder Outlets
     @IBOutlet weak var trackCollectionView: UICollectionView!
     
     private lazy var exploreViewModel = TrackExplorerViewModel()
     var looper: AVPlayerLooper!
     var player: AVQueuePlayer!
 
-//  MARK: - Runtime Methods
+// MARK: - Runtime Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         trackCollectionView.register(UINib(nibName: "TrackCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "TrackCollectionViewCell")
@@ -30,7 +30,7 @@ class TrackExplorerViewController: UIViewController {
         super.viewWillAppear(animated)
     }
     
-//  MARK: - Controller Logic Methods
+// MARK: - Controller Logic Methods
     func setUpExploreCollectionView() {
         trackCollectionView.dataSource = self
         trackCollectionView.delegate = self
@@ -53,10 +53,10 @@ class TrackExplorerViewController: UIViewController {
 
 }
 
-//  MARK: - Collection View Extension
+// MARK: - Collection View Extension
 extension TrackExplorerViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-//  MARK: - Collection View Setup Methods
+// MARK: - Collection View Setup Methods
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         exploreViewModel.numberOfTracks
     }
@@ -73,7 +73,7 @@ extension TrackExplorerViewController: UICollectionViewDelegate, UICollectionVie
         return cell
     }
     
-//  MARK: - Collection View Layout Methods
+// MARK: - Collection View Layout Methods
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -85,7 +85,7 @@ extension TrackExplorerViewController: UICollectionViewDelegate, UICollectionVie
         trackCollectionView.collectionViewLayout.invalidateLayout()
     }
     
-//  MARK: - Music Player Extension Methods
+// MARK: - Music Player Extension Methods
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         looper = nil
         loadRadio(radioURL: exploreViewModel.getTrack(atIndex: indexPath.item).trackLink)
@@ -99,14 +99,14 @@ extension TrackExplorerViewController: UICollectionViewDelegate, UICollectionVie
         player.volume = 1.0
     }
     
-//  MARK: - Collection View Custom Methods
+// MARK: - Collection View Custom Methods
     func setupTrackCell(cell: TrackCollectionViewCell?, index: Int ) {
         guard let currentCell = cell, let albumCoverUrl = URL(string: exploreViewModel.getTrack(atIndex: index).album.cover) else {
             return
         }
-        currentCell.trackName.text = exploreViewModel.getTrack(atIndex: index).title
-        currentCell.trackCover.loadArtistCover(url: albumCoverUrl)
-        currentCell.artistName.text = exploreViewModel.getTrack(atIndex: index).artist.name
+        currentCell.setTrackName(trackName: exploreViewModel.getTrack(atIndex: index).title)
+        currentCell.setTrackCover(url: albumCoverUrl)
+        currentCell.setArtistName(artistName: exploreViewModel.getTrack(atIndex: index).artist.name)
     }
     
     func loadRadio(radioURL: String) {

@@ -1,6 +1,6 @@
 //
 //  AuthManager.swift
-//  free-tunes
+//  Free-tunes
 //
 //  Created by Tshwarelo Mafaralala on 2022/03/14.
 //
@@ -8,8 +8,6 @@
 import Foundation
 
 class AuthManager {
-    
-    
     
     func login(username: String?, password: String?) -> Bool {
         guard let logInUsername = username, let logInPassword = password else {

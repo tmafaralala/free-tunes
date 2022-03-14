@@ -1,6 +1,6 @@
 //
 //  LogInViewControllerExtension.swift
-//  free-tunes
+//  Free-tunes
 //
 //  Created by Tshwarelo Mafaralala on 2022/03/14.
 //
