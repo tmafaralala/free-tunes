@@ -64,4 +64,44 @@ class LoginViewController: UIViewController {
         passwordInput.emptyFieldError()
     }
 
+<<<<<<< HEAD
+=======
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+
+        if checkTextFieldData() {
+            let loginsession = login(username: usernameInput.text, password: passwordInput.text)
+            if !loginsession {
+                displayErrorAlert(alertTitle: "Invalid credentials.",
+                                  alertMessage: "Incorrect username or password.",
+                                  alertActionTitle: "Try again",
+                                  alertDelegate: self)
+            }
+            return loginsession
+        }
+        return false
+    }
+
+}
+
+extension LoginViewController: UITextFieldDelegate {
+
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        guard let name = textField.layer.name else {
+            return
+        }
+        if name == "Username" || name == "Password" {
+            textField.applyPrimaryColorOutline()
+        }
+
+    }
+
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        guard let name = textField.layer.name else {
+            return
+        }
+        if name == "Username" || name == "Password"{
+            textField.applyDefaultStyle(withName: nil)
+        }
+    }
+>>>>>>> develop
 }
