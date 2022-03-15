@@ -8,7 +8,11 @@
 import UIKit
 
 extension UIViewController {
-
+    
+    func getAuthenticator() -> AuthManager {
+        return AuthManager()
+    }
+    
     func displayErrorAlert(alertTitle: String,
                            alertMessage: String,
                            alertActionTitle: String,
@@ -19,4 +23,5 @@ extension UIViewController {
         alert.addAction(UIAlertAction(title: alertActionTitle, style: UIAlertAction.Style.default, handler: nil))
         alertDelegate.present(alert, animated: true, completion: nil)
     }
+    
 }

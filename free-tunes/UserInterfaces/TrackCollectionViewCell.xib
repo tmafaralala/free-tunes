@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TrackCollectionViewCell" id="iNH-9S-BUt" customClass="TrackCollectionViewCell" customModule="free_tunes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="181" height="354"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="181" height="354"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XDq-yt-x3R">
+                        <rect key="frame" x="0.0" y="0.0" width="181" height="354"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6cg-bM-7BZ">
+                        <rect key="frame" x="8.5" y="254.5" width="122" height="53.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abalele" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vgr-6n-NOH">
+                                <rect key="frame" x="0.0" y="0.0" width="122" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kabza de small" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjL-r7-S4H">
+                                <rect key="frame" x="0.0" y="29" width="122" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Vgr-6n-NOH" secondAttribute="trailing" id="9bD-eC-XVd"/>
+                            <constraint firstAttribute="trailing" secondItem="yjL-r7-S4H" secondAttribute="trailing" id="CIe-T1-Efk"/>
+                            <constraint firstItem="yjL-r7-S4H" firstAttribute="leading" secondItem="6cg-bM-7BZ" secondAttribute="leading" id="Nc0-v4-Uel"/>
+                            <constraint firstItem="yjL-r7-S4H" firstAttribute="top" secondItem="Vgr-6n-NOH" secondAttribute="bottom" constant="8" symbolic="YES" id="eE7-M4-dbk"/>
+                            <constraint firstItem="Vgr-6n-NOH" firstAttribute="leading" secondItem="6cg-bM-7BZ" secondAttribute="leading" id="fpp-Hg-cgf"/>
+                            <constraint firstItem="yjL-r7-S4H" firstAttribute="top" secondItem="Vgr-6n-NOH" secondAttribute="bottom" constant="8" symbolic="YES" id="l4q-2v-6aU"/>
+                            <constraint firstItem="Vgr-6n-NOH" firstAttribute="top" secondItem="6cg-bM-7BZ" secondAttribute="top" id="wga-8z-FJ5"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="p3m-Wq-EN2"/>
+            <constraints>
+                <constraint firstItem="XDq-yt-x3R" firstAttribute="top" secondItem="iNH-9S-BUt" secondAttribute="top" id="1WK-tE-90I"/>
+                <constraint firstAttribute="bottom" secondItem="6cg-bM-7BZ" secondAttribute="bottom" multiplier="1.15" id="3CH-ve-2nZ"/>
+                <constraint firstItem="XDq-yt-x3R" firstAttribute="leading" secondItem="iNH-9S-BUt" secondAttribute="leading" id="4Ie-0Y-1xf"/>
+                <constraint firstAttribute="trailing" secondItem="6cg-bM-7BZ" secondAttribute="trailing" constant="50.5" id="CFI-5N-bOz"/>
+                <constraint firstAttribute="bottom" secondItem="XDq-yt-x3R" secondAttribute="bottom" id="F8j-aH-FJE"/>
+                <constraint firstItem="6cg-bM-7BZ" firstAttribute="height" secondItem="iNH-9S-BUt" secondAttribute="height" multiplier="0.15113" id="L1w-BD-qeS"/>
+                <constraint firstAttribute="trailing" secondItem="XDq-yt-x3R" secondAttribute="trailing" id="Qsp-t3-YgS"/>
+                <constraint firstItem="6cg-bM-7BZ" firstAttribute="width" secondItem="iNH-9S-BUt" secondAttribute="width" multiplier="0.674033" id="fhG-aV-9o1"/>
+            </constraints>
+            <size key="customSize" width="181" height="354"/>
+            <connections>
+                <outlet property="artistName" destination="yjL-r7-S4H" id="GvF-dS-q6L"/>
+                <outlet property="trackCover" destination="XDq-yt-x3R" id="LMe-zb-G1P"/>
+                <outlet property="trackName" destination="Vgr-6n-NOH" id="3rV-d9-hT2"/>
+            </connections>
+            <point key="canvasLocation" x="210.86956521739131" y="198.88392857142856"/>
+        </collectionViewCell>
+    </objects>
+</document>
