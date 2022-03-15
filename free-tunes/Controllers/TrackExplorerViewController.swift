@@ -1,5 +1,5 @@
 //
-//  CategoriesViewController.swift
+//  TrackExplorerViewController.swift
 //  Free-tunes
 //
 //  Created by Tshwarelo Mafaralala on 2022/02/28.
