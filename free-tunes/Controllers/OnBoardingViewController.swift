@@ -22,4 +22,5 @@ class OnBoardingViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
+    
 }

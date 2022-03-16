@@ -4,7 +4,6 @@
 //
 //  Created by Tshwarelo Mafaralala on 2022/02/28.
 //
-
 import UIKit
 
 class LoginViewController: UIViewController {
@@ -27,8 +26,16 @@ class LoginViewController: UIViewController {
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+
         if checkTextFieldData() {
-            return getAuthenticator().login(username: usernameInput.text, password: passwordInput.text)
+            let loginsession = self.getAuthenticator().login(username: usernameInput.text, password: passwordInput.text)
+            if !loginsession {
+                displayErrorAlert(alertTitle: "Invalid credentials.",
+                                  alertMessage: "Incorrect username or password.",
+                                  alertActionTitle: "Try again",
+                                  alertDelegate: self)
+            }
+            return loginsession
         }
         return false
     }
@@ -63,45 +70,4 @@ class LoginViewController: UIViewController {
         usernameInput.emptyFieldError()
         passwordInput.emptyFieldError()
     }
-
-<<<<<<< HEAD
-=======
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-
-        if checkTextFieldData() {
-            let loginsession = login(username: usernameInput.text, password: passwordInput.text)
-            if !loginsession {
-                displayErrorAlert(alertTitle: "Invalid credentials.",
-                                  alertMessage: "Incorrect username or password.",
-                                  alertActionTitle: "Try again",
-                                  alertDelegate: self)
-            }
-            return loginsession
-        }
-        return false
-    }
-
-}
-
-extension LoginViewController: UITextFieldDelegate {
-
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        guard let name = textField.layer.name else {
-            return
-        }
-        if name == "Username" || name == "Password" {
-            textField.applyPrimaryColorOutline()
-        }
-
-    }
-
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        guard let name = textField.layer.name else {
-            return
-        }
-        if name == "Username" || name == "Password"{
-            textField.applyDefaultStyle(withName: nil)
-        }
-    }
->>>>>>> develop
 }
