@@ -10,7 +10,7 @@ class LoginViewController: UIViewController {
 
 // MARK: - Interface Builder Outlets
     @IBOutlet private weak var headerText: UILabel!
-    @IBOutlet private weak var  usernameInput: UITextField!
+    @IBOutlet private weak var usernameInput: UITextField!
     @IBOutlet private weak var passwordInput: UITextField!
 
 // MARK: - Runtime Methods
@@ -54,16 +54,6 @@ class LoginViewController: UIViewController {
     func setupPasswordInputField() {
         passwordInput.applyDefaultStyle(withName: "Password")
         passwordInput.delegate = self
-    }
-
-// MARK: - Input Validation
-    func checkTextFieldData() -> Bool {
-        if usernameInput.isEmpty && passwordInput.isEmpty {
-            emptyTextFields()
-            return false
-        }
-        
-        return true
     }
 
     func emptyTextFields() {
