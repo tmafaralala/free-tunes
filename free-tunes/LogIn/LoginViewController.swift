@@ -12,6 +12,8 @@ class LoginViewController: UIViewController {
     @IBOutlet private weak var headerText: UILabel!
     @IBOutlet private weak var usernameInput: UITextField!
     @IBOutlet private weak var passwordInput: UITextField!
+    
+    private lazy var viewModel = LogInViewModel(delegate: self)
 
 // MARK: - Runtime Methods
     override func viewDidLoad() {
@@ -26,18 +28,7 @@ class LoginViewController: UIViewController {
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-
-        if checkTextFieldData() {
-            let loginsession = self.getAuthenticator().login(username: usernameInput.text, password: passwordInput.text)
-            if !loginsession {
-                displayErrorAlert(alertTitle: "Invalid credentials.",
-                                  alertMessage: "Incorrect username or password.",
-                                  alertActionTitle: "Try again",
-                                  alertDelegate: self)
-            }
-            return loginsession
-        }
-        return false
+        return viewModel.login(username: usernameInput.text, password: passwordInput.text)
     }
 
 // MARK: - InputFields Setup
@@ -55,9 +46,22 @@ class LoginViewController: UIViewController {
         passwordInput.applyDefaultStyle(withName: "Password")
         passwordInput.delegate = self
     }
+}
 
-    func emptyTextFields() {
+extension LoginViewController: LogInViewModelDelegate {
+    
+    func notify() {
         usernameInput.emptyFieldError()
         passwordInput.emptyFieldError()
+    }
+    
+    func reloadView() {
+
+    }
+    
+    func show(error: String) {
+        displayErrorAlert(alertTitle: "Invalid credentials.",
+                          alertMessage: error,
+                          alertActionTitle: "Try again")
     }
 }
