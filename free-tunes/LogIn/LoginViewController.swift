@@ -55,10 +55,6 @@ extension LoginViewController: LogInViewModelDelegate {
         passwordInput.emptyFieldError()
     }
     
-    func reloadView() {
-
-    }
-    
     func show(error: String) {
         displayErrorAlert(alertTitle: "Invalid credentials.",
                           alertMessage: error,

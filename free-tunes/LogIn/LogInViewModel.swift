@@ -7,8 +7,9 @@
 
 import Foundation
 
-protocol LogInViewModelDelegate: ViewModelDelegate {
+protocol LogInViewModelDelegate {
     func notify()
+    func show(error: String)
 }
 
 class LogInViewModel {
