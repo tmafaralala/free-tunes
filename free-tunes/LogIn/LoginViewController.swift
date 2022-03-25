@@ -42,8 +42,9 @@ class LoginViewController: UIViewController {
         passwordInput.applyDefaultStyle(withName: "Password")
         passwordInput.delegate = self
     }
+    
     @IBAction func logIn(_ sender: Any) {
-        viewModel.login(username: usernameInput.text, password: passwordInput.text)
+        viewModel.login(username: usernameInput?.text ?? "", password: passwordInput?.text ?? "")
     }
 }
 

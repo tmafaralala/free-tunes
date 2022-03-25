@@ -22,14 +22,14 @@ class LogInViewModel {
     }
     
 // MARK: - Authentication
-    func login(username: String?, password: String?)  {
-        guard let logInUsername = username, let logInPassword = password else {
+    func login(username: String, password: String)  {
+        if username.isEmpty || password.isEmpty {
             delegate?.notifyEmptyData()
             return
         }
         
-        if checkTextFieldData(usernameInput: logInUsername, passwordInput: logInPassword) {
-            if verifyCredentials(username: logInUsername, password: logInPassword) {
+        if checkTextFieldData(usernameInput: username, passwordInput: password) {
+            if verifyCredentials(username: username, password: password) {
                 delegate?.navigate()
             }
         }
