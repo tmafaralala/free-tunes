@@ -35,7 +35,7 @@ class LogInViewModel {
         }
     }
 
-    func verifyCredentials(username: String?, password: String?) -> Bool {
+    func verifyCredentials(username: String, password: String) -> Bool {
         if username != "Admin" || password != "TestPass123" {
             delegate?.show(error: "Incorrect username or password.")
             return false
