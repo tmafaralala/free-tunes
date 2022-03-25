@@ -35,7 +35,7 @@ class LogInViewModel {
         }
     }
 
-    func verifyCredentials(username: String, password: String) -> Bool {
+    private func verifyCredentials(username: String, password: String) -> Bool {
         if username != "Admin" || password != "TestPass123" {
             delegate?.show(error: "Incorrect username or password.")
             return false
@@ -44,7 +44,7 @@ class LogInViewModel {
     }
     
 // MARK: - Input Validation
-    func checkTextFieldData(usernameInput: String, passwordInput: String) -> Bool {
+    private func checkTextFieldData(usernameInput: String, passwordInput: String) -> Bool {
         if usernameInput.isEmpty && passwordInput.isEmpty {
             delegate?.notifyEmptyData()
             return false
