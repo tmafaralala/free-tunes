@@ -7,8 +7,9 @@
 
 import Foundation
 
-protocol LogInViewModelDelegate {
-    func notify()
+protocol LogInViewModelDelegate: AnyObject {
+    func notifyEmptyData()
+    func navigate()
     func show(error: String)
 }
 
@@ -21,15 +22,17 @@ class LogInViewModel {
     }
     
 // MARK: - Authentication
-    func login(username: String?, password: String?) -> Bool {
+    func login(username: String?, password: String?)  {
         guard let logInUsername = username, let logInPassword = password else {
-            delegate?.notify()
-            return false
+            delegate?.notifyEmptyData()
+            return
         }
+        
         if checkTextFieldData(usernameInput: logInUsername, passwordInput: logInPassword) {
-            return verifyCredentials(username: logInUsername, password: logInPassword)
+            if verifyCredentials(username: logInUsername, password: logInPassword) {
+                delegate?.navigate()
+            }
         }
-        return false
     }
 
     func verifyCredentials(username: String?, password: String?) -> Bool {
@@ -43,7 +46,7 @@ class LogInViewModel {
 // MARK: - Input Validation
     func checkTextFieldData(usernameInput: String, passwordInput: String) -> Bool {
         if usernameInput.isEmpty && passwordInput.isEmpty {
-            delegate?.notify()
+            delegate?.notifyEmptyData()
             return false
         }
         return true

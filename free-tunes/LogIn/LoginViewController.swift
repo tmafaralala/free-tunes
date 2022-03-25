@@ -26,10 +26,6 @@ class LoginViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
-    
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        return viewModel.login(username: usernameInput.text, password: passwordInput.text)
-    }
 
 // MARK: - InputFields Setup
     func setupInputFields() {
@@ -46,13 +42,20 @@ class LoginViewController: UIViewController {
         passwordInput.applyDefaultStyle(withName: "Password")
         passwordInput.delegate = self
     }
+    @IBAction func logIn(_ sender: Any) {
+        viewModel.login(username: usernameInput.text, password: passwordInput.text)
+    }
 }
 
 extension LoginViewController: LogInViewModelDelegate {
     
-    func notify() {
+    func notifyEmptyData() {
         usernameInput.emptyFieldError()
         passwordInput.emptyFieldError()
+    }
+    
+    func navigate() {
+        performSegue(withIdentifier: "NavigateHome", sender: self)
     }
     
     func show(error: String) {
