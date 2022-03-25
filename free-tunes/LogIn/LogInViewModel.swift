@@ -9,7 +9,7 @@ import Foundation
 
 protocol LogInViewModelDelegate: AnyObject {
     func notifyEmptyData()
-    func navigate()
+    func navigateToNext()
     func show(error: String)
 }
 
@@ -22,7 +22,7 @@ class LogInViewModel {
     }
     
 // MARK: - Authentication
-    func login(username: String, password: String)  {
+    func login(username: String, password: String) {
         if username.isEmpty || password.isEmpty {
             delegate?.notifyEmptyData()
             return
@@ -30,7 +30,7 @@ class LogInViewModel {
         
         if checkTextFieldData(usernameInput: username, passwordInput: password) {
             if verifyCredentials(username: username, password: password) {
-                delegate?.navigate()
+                delegate?.navigateToNext()
             }
         }
     }

@@ -43,7 +43,7 @@ class LoginViewController: UIViewController {
         passwordInput.delegate = self
     }
     
-    @IBAction func logIn(_ sender: Any) {
+    @IBAction private func logIn(_ sender: Any) {
         viewModel.login(username: usernameInput?.text ?? "", password: passwordInput?.text ?? "")
     }
 }
@@ -55,7 +55,7 @@ extension LoginViewController: LogInViewModelDelegate {
         passwordInput.emptyFieldError()
     }
     
-    func navigate() {
+    func navigateToNext() {
         performSegue(withIdentifier: "NavigateHome", sender: self)
     }
     
