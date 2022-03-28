@@ -9,19 +9,15 @@ import UIKit
 
 extension UIViewController {
     
-    func getAuthenticator() -> AuthManager {
-        return AuthManager()
-    }
-    
     func displayErrorAlert(alertTitle: String,
                            alertMessage: String,
-                           alertActionTitle: String,
-                           alertDelegate: UIViewController) {
-        let alert = UIAlertController(title: alertTitle,
-                                      message: alertMessage,
-                                      preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: alertActionTitle, style: UIAlertAction.Style.default, handler: nil))
-        alertDelegate.present(alert, animated: true, completion: nil)
+                           alertActionTitle: String) {
+            let alert = UIAlertController(title: alertTitle,
+                                          message: alertMessage,
+                                          preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: alertActionTitle, style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
     }
     
 }

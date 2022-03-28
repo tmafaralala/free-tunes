@@ -10,8 +10,10 @@ class LoginViewController: UIViewController {
 
 // MARK: - Interface Builder Outlets
     @IBOutlet private weak var headerText: UILabel!
-    @IBOutlet private weak var  usernameInput: UITextField!
+    @IBOutlet private weak var usernameInput: UITextField!
     @IBOutlet private weak var passwordInput: UITextField!
+    
+    private lazy var viewModel = LogInViewModel(delegate: self)
 
 // MARK: - Runtime Methods
     override func viewDidLoad() {
@@ -23,21 +25,6 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
-    }
-    
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-
-        if checkTextFieldData() {
-            let loginsession = self.getAuthenticator().login(username: usernameInput.text, password: passwordInput.text)
-            if !loginsession {
-                displayErrorAlert(alertTitle: "Invalid credentials.",
-                                  alertMessage: "Incorrect username or password.",
-                                  alertActionTitle: "Try again",
-                                  alertDelegate: self)
-            }
-            return loginsession
-        }
-        return false
     }
 
 // MARK: - InputFields Setup
@@ -55,19 +42,26 @@ class LoginViewController: UIViewController {
         passwordInput.applyDefaultStyle(withName: "Password")
         passwordInput.delegate = self
     }
-
-// MARK: - Input Validation
-    func checkTextFieldData() -> Bool {
-        if usernameInput.isEmpty && passwordInput.isEmpty {
-            emptyTextFields()
-            return false
-        }
-        
-        return true
+    
+    @IBAction private func logIn(_ sender: Any) {
+        viewModel.login(username: usernameInput?.text ?? "", password: passwordInput?.text ?? "")
     }
+}
 
-    func emptyTextFields() {
+extension LoginViewController: LogInViewModelDelegate {
+    
+    func notifyEmptyData() {
         usernameInput.emptyFieldError()
         passwordInput.emptyFieldError()
+    }
+    
+    func navigateToNext() {
+        performSegue(withIdentifier: "NavigateHome", sender: self)
+    }
+    
+    func show(error: String) {
+        displayErrorAlert(alertTitle: "Invalid credentials.",
+                          alertMessage: error,
+                          alertActionTitle: "Try again")
     }
 }
