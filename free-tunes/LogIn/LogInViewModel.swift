@@ -16,39 +16,30 @@ protocol LogInViewModelDelegate: AnyObject {
 class LogInViewModel {
     
     private weak var delegate: LogInViewModelDelegate?
+    private var username: String?
+    private var password: String?
     
     init(delegate: LogInViewModelDelegate) {
         self.delegate = delegate
     }
     
-// MARK: - Authentication
-    func login(username: String, password: String) {
-        if username.isEmpty || password.isEmpty {
-            delegate?.notifyEmptyData()
-            return
-        }
-        
-        if checkTextFieldData(usernameInput: username, passwordInput: password) {
-            if verifyCredentials(username: username, password: password) {
-                delegate?.navigateToNext()
-            }
-        }
-    }
-
-    private func verifyCredentials(username: String, password: String) -> Bool {
-        if username != "Admin" || password != "TestPass123" {
-            delegate?.show(error: "Incorrect username or password.")
-            return false
-        }
-        return true
+    private var validateCredentials: Bool {
+        return username != "Admin" || password != "TestPass123"
     }
     
-// MARK: - Input Validation
-    private func checkTextFieldData(usernameInput: String, passwordInput: String) -> Bool {
-        if usernameInput.isEmpty && passwordInput.isEmpty {
+    private var credentialsNotEmpty: Bool {
+        return (username?.isEmpty) != nil && (password?.isEmpty) != nil
+    }
+    
+// MARK: - Authentication
+    func login(username: String, password: String) {
+        self.username = username
+        self.password = password
+        
+        if credentialsNotEmpty {
+            validateCredentials ? delegate?.navigateToNext() : delegate?.show(error: "Incorrect username or password.")
+        } else {
             delegate?.notifyEmptyData()
-            return false
         }
-        return true
     }
 }
