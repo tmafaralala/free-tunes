@@ -9,6 +9,9 @@ import Foundation
 
 struct TracksModel: Codable {
     let tracksData: Tracks
+    enum CodingKeys: String, CodingKey {
+        case tracksData = "tracks"
+    }
 }
 
 struct Tracks: Codable {

@@ -7,4 +7,4 @@
 
 import Foundation
 
-typealias fetchMusicResult = Result<TracksModel, ApiError>
+typealias FetchMusicResult = Result<TracksModel, Error>

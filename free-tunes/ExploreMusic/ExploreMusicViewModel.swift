@@ -13,7 +13,6 @@ class ExploreMusicViewModel {
     private weak var delegate: ExploreMusicViewModelDelegate?
     private var repository: ExploreMusicRepository?
 
-    
     init(repository: ExploreMusicRepository, delegate: ExploreMusicViewModelDelegate) {
         self.repository = repository
         self.delegate = delegate
@@ -28,13 +27,13 @@ class ExploreMusicViewModel {
     }
     
     func fetchMusicData() {
-        repository?.fetchTrendingMusic(){ [weak self] result in
+        repository?.fetchTrendingMusic() { [weak self] result in
             switch result {
-                case .success(let musicData):
-                    self?.topTracks = musicData.tracksData.tracks
-                    self?.delegate?.reloadView()
-                case .failure(let dataError):
-                    self?.delegate?.show(error: dataError.rawValue)
+            case .success(let musicData):
+                self?.topTracks = musicData.tracksData.tracks
+                self?.delegate?.reloadView()
+            case .failure(let dataError):
+                self?.delegate?.show(error: dataError.localizedDescription)
             }
         }
     }

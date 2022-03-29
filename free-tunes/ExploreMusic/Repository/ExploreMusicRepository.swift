@@ -8,9 +8,11 @@
 import Foundation
 
 class ExploreMusicRepository {
-    func fetchTrendingMusic(completion: @escaping (fetchMusicResult) -> Void) {
-        guard let url = Constants.artistExploreContentUrl else{
-            completion(.failure(ApiError.invalidUrl))
+    func fetchTrendingMusic(completion: @escaping ((FetchMusicResult) -> Void)) {
+        guard let url = Constants.artistExploreContentUrl else {
+            DispatchQueue.main.async {
+                completion(.failure(ApiError.invalidUrl))
+            }
             return
         }
         URLSession.shared.makeRequest(url: url, method: .get, returnModel: TracksModel.self, completion: completion)
