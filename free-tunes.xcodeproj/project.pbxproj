@@ -13,7 +13,6 @@
 		0B666C8C27F1FCC00000694E /* ExploreMusicRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B666C8B27F1FCC00000694E /* ExploreMusicRepository.swift */; };
 		0B666C8E27F2F1C00000694E /* ServiceErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B666C8D27F2F1C00000694E /* ServiceErrors.swift */; };
 		0B666C9027F2F5A90000694E /* ServiceMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B666C8F27F2F5A90000694E /* ServiceMethods.swift */; };
-		0B666C9227F2F5E30000694E /* CustomTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B666C9127F2F5E30000694E /* CustomTypes.swift */; };
 		0B7AECD127CCE00E00D23D4A /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7AECD027CCE00E00D23D4A /* OnBoardingViewController.swift */; };
 		0B7AECD327CCE16900D23D4A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7AECD227CCE16900D23D4A /* LoginViewController.swift */; };
 		0B7F87B527EC8C8F00AA778F /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F87B427EC8C8F00AA778F /* LogInViewModel.swift */; };
@@ -61,7 +60,6 @@
 		0B666C8B27F1FCC00000694E /* ExploreMusicRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreMusicRepository.swift; sourceTree = "<group>"; };
 		0B666C8D27F2F1C00000694E /* ServiceErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceErrors.swift; sourceTree = "<group>"; };
 		0B666C8F27F2F5A90000694E /* ServiceMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceMethods.swift; sourceTree = "<group>"; };
-		0B666C9127F2F5E30000694E /* CustomTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTypes.swift; sourceTree = "<group>"; };
 		0B7AECD027CCE00E00D23D4A /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		0B7AECD227CCE16900D23D4A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0B7F87B427EC8C8F00AA778F /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
@@ -180,7 +178,6 @@
 				0BCC8B8727C8C8BA00F029D2 /* Constants.swift */,
 				0B666C8D27F2F1C00000694E /* ServiceErrors.swift */,
 				0B666C8F27F2F5A90000694E /* ServiceMethods.swift */,
-				0B666C9127F2F5E30000694E /* CustomTypes.swift */,
 			);
 			path = "Service Layer";
 			sourceTree = "<group>";
@@ -426,7 +423,6 @@
 				0B666C8927F1FA7E0000694E /* ExploreMusicViewModel.swift in Sources */,
 				0BEAF48627C79F7700C0590D /* AppDelegate.swift in Sources */,
 				0BEAF48827C79F7700C0590D /* SceneDelegate.swift in Sources */,
-				0B666C9227F2F5E30000694E /* CustomTypes.swift in Sources */,
 				0BA6FD6327CEA17000396D28 /* UILabelExtension.swift in Sources */,
 				0BE2C39827DF3BAA007F3FDD /* LogInViewControllerExtension.swift in Sources */,
 				0BCC8B8827C8C8BA00F029D2 /* Constants.swift in Sources */,
