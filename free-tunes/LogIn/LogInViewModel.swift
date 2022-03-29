@@ -24,8 +24,7 @@ class LogInViewModel {
     }
     
     private var validateCredentials: Bool {
-        // return username != "Admin" || password != "TestPass123"
-        return true
+        return username != "Admin" || password != "TestPass123"
     }
     
     private var credentialsNotEmpty: Bool {
