@@ -54,10 +54,10 @@ extension ExploreMusicViewController: UICollectionViewDelegate, UICollectionView
         else {
             return UICollectionViewCell()
         }
-        
-        cell.setupTrackCell(albumCover: exploreViewModel.getTrack(atIndex: indexPath.item)?.album.cover ?? "",
-                            trackName: exploreViewModel.getTrack(atIndex: indexPath.item)?.title ?? "",
-                            artistName: exploreViewModel.getTrack(atIndex: indexPath.item)?.artist.name ?? "")
+        guard let trendingTrack = exploreViewModel.getTrack(atIndex: indexPath.item) else {
+            return UICollectionViewCell()
+        }
+        cell.setupTrackCell(track: trendingTrack)
         return cell
     }
     
@@ -71,7 +71,10 @@ extension ExploreMusicViewController: UICollectionViewDelegate, UICollectionView
 // MARK: - Music Player Extension Methods
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         looper = nil
-        loadRadio(radioURL: exploreViewModel.getTrack(atIndex: indexPath.item)?.trackLink ?? "")
+        guard let trendingTrack = exploreViewModel.getTrack(atIndex: indexPath.item) else {
+            return
+        }
+        loadRadio(radioURL: trendingTrack.trackLink)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
