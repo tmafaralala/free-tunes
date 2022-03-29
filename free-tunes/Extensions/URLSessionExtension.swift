@@ -9,24 +9,10 @@ import Foundation
 
 extension URLSession {
 
-    enum CustomError: Error {
-        case invalidResponse
-        case invalidRequest
-        case invalidBody
-        case invalidUrl
-        case invalidData
-    }
-
-    enum HttpMethod: String {
-        case get = "GET"
-        case post = "POST"
-        case delete = "DELETE"
-    }
-
     private func buildRequest(url: URL,
                               httpMethod: HttpMethod?,
                               bodyParamaters: [String: Any]?,
-                              serilizedBody: Data?) throws -> URLRequest {
+                              serializedBody: Data?) throws -> URLRequest {
 
             var request = URLRequest(url: url)
             request.httpMethod = HttpMethod.get.rawValue
@@ -37,17 +23,15 @@ extension URLSession {
             }
 
             if let safeParamaters = bodyParamaters {
-
                 if let body = try? JSONSerialization.data(
                     withJSONObject: safeParamaters, options: []) {
                     request.httpBody = body
-                    print(body.description)
                 } else {
-                    throw CustomError.invalidBody
+                    throw ApiError.invalidBody
                 }
 
             } else
-            if let body = serilizedBody {
+            if let body = serializedBody {
                 request.httpBody = body
             }
 
@@ -62,26 +46,26 @@ extension URLSession {
                                        completion: @escaping (Result<Generic, Error>) -> Void) {
 
             guard let endpointUrl = url else {
-                completion(.failure(CustomError.invalidUrl))
+                completion(.failure(ApiError.invalidUrl))
                 return
             }
+
             do {
                 let urlRequest = try buildRequest(url: endpointUrl,
                                                   httpMethod: method,
                                                   bodyParamaters: paramters,
-                                                  serilizedBody: knownBody)
+                                                  serializedBody: knownBody)
 
                 let apiTask = self.dataTask(with: urlRequest) { data, _, error in
                     guard let safeData = data else {
-
                         if let error = error {
                             completion(.failure(error))
                         } else {
-                            completion(.failure(CustomError.invalidData))
+                            completion(.failure(ApiError.invalidData))
                         }
-
                         return
                     }
+
                     do {
                         let result = try JSONDecoder().decode(returnModel, from: safeData)
                         completion(.success(result))
@@ -89,11 +73,9 @@ extension URLSession {
                         completion(.failure(error))
                     }
                 }
-
                 apiTask.resume()
-
-            } catch CustomError.invalidBody {
-                completion(.failure(CustomError.invalidRequest))
+            } catch ApiError.invalidBody {
+                completion(.failure(ApiError.invalidRequest))
             } catch {
                 completion(.failure(error))
             }

@@ -8,12 +8,12 @@
 import UIKit
 import AVFoundation
 
-class TrackExplorerViewController: UIViewController {
+class ExploreMusicViewController: UIViewController {
     
 // MARK: - Interface Builder Outlets
     @IBOutlet private weak var trackCollectionView: UICollectionView!
     
-    private lazy var exploreViewModel = TrackExplorerViewModel()
+    private lazy var exploreViewModel = ExploreMusicViewModel()
     private var looper: AVPlayerLooper!
     private var player: AVQueuePlayer!
 
@@ -54,7 +54,7 @@ class TrackExplorerViewController: UIViewController {
 }
 
 // MARK: - Collection View Extension
-extension TrackExplorerViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension ExploreMusicViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
 // MARK: - Collection View Setup Methods
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

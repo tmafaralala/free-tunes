@@ -242,16 +242,16 @@
                                 <exclude reference="Ggw-B0-dTf"/>
                                 <exclude reference="LmZ-i6-IsN"/>
                                 <exclude reference="POp-oZ-l18"/>
+                                <exclude reference="POm-Wh-HMM"/>
+                                <exclude reference="1Es-Lu-20N"/>
+                                <exclude reference="1pu-Td-ch8"/>
+                                <exclude reference="HXG-yd-PEJ"/>
                                 <exclude reference="Wiw-wl-cq3"/>
                                 <exclude reference="XR0-73-HTB"/>
                                 <exclude reference="j38-4r-81a"/>
                                 <exclude reference="kel-vy-OqW"/>
                                 <exclude reference="nzy-2h-CD8"/>
                                 <exclude reference="yOW-4D-cOJ"/>
-                                <exclude reference="POm-Wh-HMM"/>
-                                <exclude reference="1Es-Lu-20N"/>
-                                <exclude reference="1pu-Td-ch8"/>
-                                <exclude reference="HXG-yd-PEJ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=regular">
@@ -262,9 +262,9 @@
                                 <include reference="BkD-hJ-20o"/>
                                 <include reference="LmZ-i6-IsN"/>
                                 <include reference="POp-oZ-l18"/>
+                                <include reference="HXG-yd-PEJ"/>
                                 <include reference="Wiw-wl-cq3"/>
                                 <include reference="yOW-4D-cOJ"/>
-                                <include reference="HXG-yd-PEJ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -272,13 +272,13 @@
                                 <include reference="YKU-dT-0Oz"/>
                                 <include reference="ChU-hP-2Lo"/>
                                 <include reference="Ggw-B0-dTf"/>
+                                <include reference="POm-Wh-HMM"/>
+                                <include reference="1Es-Lu-20N"/>
+                                <include reference="1pu-Td-ch8"/>
                                 <include reference="XR0-73-HTB"/>
                                 <include reference="j38-4r-81a"/>
                                 <include reference="kel-vy-OqW"/>
                                 <include reference="nzy-2h-CD8"/>
-                                <include reference="POm-Wh-HMM"/>
-                                <include reference="1Es-Lu-20N"/>
-                                <include reference="1pu-Td-ch8"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -320,10 +320,10 @@
             </objects>
             <point key="canvasLocation" x="-982.60869565217399" y="9.375"/>
         </scene>
-        <!--Track Explorer View Controller-->
+        <!--Explore Music View Controller-->
         <scene sceneID="f7q-hD-Hcx">
             <objects>
-                <viewController id="gm9-FG-Xah" customClass="TrackExplorerViewController" customModule="free_tunes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gm9-FG-Xah" customClass="ExploreMusicViewController" customModule="free_tunes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fz0-wC-mQe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

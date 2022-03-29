@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct TrackData: Codable {
-    let tracks: Tracks
+struct TracksModel: Codable {
+    let tracksData: Tracks
 }
 
 struct Tracks: Codable {
