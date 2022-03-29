@@ -7,6 +7,8 @@
 
 import Foundation
 
+typealias FetchMusicResult = Result<TracksModel, Error>
+
 class ExploreMusicRepository {
     func fetchTrendingMusic(completion: @escaping ((FetchMusicResult) -> Void)) {
         guard let url = Constants.artistExploreContentUrl else {

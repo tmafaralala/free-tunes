@@ -13,7 +13,8 @@ class ExploreMusicViewController: UIViewController {
 // MARK: - Interface Builder Outlets
     @IBOutlet private weak var trackCollectionView: UICollectionView!
     
-    private lazy var exploreViewModel = ExploreMusicViewModel(repository: ExploreMusicRepository(), delegate: self)
+    private lazy var exploreViewModel = ExploreMusicViewModel(repository: ExploreMusicRepository(),
+                                                              delegate: self)
     private var looper: AVPlayerLooper!
     private var player: AVQueuePlayer!
 
@@ -54,7 +55,7 @@ extension ExploreMusicViewController: UICollectionViewDelegate, UICollectionView
         else {
             return UICollectionViewCell()
         }
-        guard let trendingTrack = exploreViewModel.getTrack(atIndex: indexPath.item) else {
+        guard let trendingTrack = exploreViewModel.track(atIndex: indexPath.item) else {
             return UICollectionViewCell()
         }
         cell.setupTrackCell(track: trendingTrack)
@@ -71,7 +72,7 @@ extension ExploreMusicViewController: UICollectionViewDelegate, UICollectionView
 // MARK: - Music Player Extension Methods
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         looper = nil
-        guard let trendingTrack = exploreViewModel.getTrack(atIndex: indexPath.item) else {
+        guard let trendingTrack = exploreViewModel.track(atIndex: indexPath.item) else {
             return
         }
         loadRadio(radioURL: trendingTrack.trackLink)

@@ -22,7 +22,7 @@ class ExploreMusicViewModel {
         return topTracks?.count ?? 0
     }
     
-    func getTrack(atIndex: Int) -> Track? {
+    func track(atIndex: Int) -> Track? {
         return topTracks?[atIndex] ?? nil
     }
     
