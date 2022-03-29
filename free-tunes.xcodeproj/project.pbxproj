@@ -144,6 +144,14 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
+		0B666C9327F336540000694E /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				0B7AECD027CCE00E00D23D4A /* OnBoardingViewController.swift */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
 		0B7F87B327EC86AD00AA778F /* LogIn */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,7 +225,7 @@
 				0BEAF4B827C7A10D00C0590D /* UserInterfaces */,
 				0B7F87B327EC86AD00AA778F /* LogIn */,
 				0B666C8627F1F9380000694E /* ExploreMusic */,
-				0BEAF4B727C7A05700C0590D /* Controllers */,
+				0B666C9327F336540000694E /* OnBoarding */,
 			);
 			path = "free-tunes";
 			sourceTree = "<group>";
@@ -237,14 +245,6 @@
 				0BEAF4A827C79F7C00C0590D /* FreeTunesUITestsLaunchTests.swift */,
 			);
 			path = "free-tunesUITests";
-			sourceTree = "<group>";
-		};
-		0BEAF4B727C7A05700C0590D /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				0B7AECD027CCE00E00D23D4A /* OnBoardingViewController.swift */,
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		0BEAF4B827C7A10D00C0590D /* UserInterfaces */ = {
