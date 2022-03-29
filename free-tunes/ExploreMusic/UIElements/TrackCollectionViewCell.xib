@@ -20,17 +20,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="181" height="354"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6cg-bM-7BZ">
-                        <rect key="frame" x="8.5" y="254.5" width="122" height="53.5"/>
+                        <rect key="frame" x="11" y="283.5" width="122" height="53.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abalele" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vgr-6n-NOH">
-                                <rect key="frame" x="0.0" y="0.0" width="122" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="0.0" y="0.0" width="122" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kabza de small" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjL-r7-S4H">
-                                <rect key="frame" x="0.0" y="29" width="122" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kabza de small" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjL-r7-S4H">
+                                <rect key="frame" x="0.0" y="32" width="122" height="53"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -50,9 +50,9 @@
             <viewLayoutGuide key="safeArea" id="p3m-Wq-EN2"/>
             <constraints>
                 <constraint firstItem="XDq-yt-x3R" firstAttribute="top" secondItem="iNH-9S-BUt" secondAttribute="top" id="1WK-tE-90I"/>
-                <constraint firstAttribute="bottom" secondItem="6cg-bM-7BZ" secondAttribute="bottom" multiplier="1.15" id="3CH-ve-2nZ"/>
+                <constraint firstAttribute="bottom" secondItem="6cg-bM-7BZ" secondAttribute="bottom" multiplier="1.05" id="3CH-ve-2nZ"/>
                 <constraint firstItem="XDq-yt-x3R" firstAttribute="leading" secondItem="iNH-9S-BUt" secondAttribute="leading" id="4Ie-0Y-1xf"/>
-                <constraint firstAttribute="trailing" secondItem="6cg-bM-7BZ" secondAttribute="trailing" constant="50.5" id="CFI-5N-bOz"/>
+                <constraint firstAttribute="trailing" secondItem="6cg-bM-7BZ" secondAttribute="trailing" multiplier="1.36" id="CFI-5N-bOz"/>
                 <constraint firstAttribute="bottom" secondItem="XDq-yt-x3R" secondAttribute="bottom" id="F8j-aH-FJE"/>
                 <constraint firstItem="6cg-bM-7BZ" firstAttribute="height" secondItem="iNH-9S-BUt" secondAttribute="height" multiplier="0.15113" id="L1w-BD-qeS"/>
                 <constraint firstAttribute="trailing" secondItem="XDq-yt-x3R" secondAttribute="trailing" id="Qsp-t3-YgS"/>
