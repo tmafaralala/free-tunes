@@ -14,34 +14,33 @@ class TrackCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var artistName: UILabel!
     @IBOutlet private weak var trackName: UILabel!
     private var backupText: String!
-    private var timer: Timer!
+    private weak var textSpeedTimer: Timer!
     
     func setupTrackCell(track: Track) {
         guard let albumCoverUrl = URL(string: track.album.cover) else {
             return
         }
         self.trackName.text = track.title
+        backupText = track.title
         self.trackCover.loadArtistCover(url: albumCoverUrl)
         self.artistName.text = "@ "+track.artist.name
-        backupText = track.title
         startMovingText()
     }
     
     func startMovingText() {
-        timer = Timer.scheduledTimer(withTimeInterval: 0.25, repeats: true) { [weak self]_ in
-            DispatchQueue.main.async {
-                if ((self?.trackName.text?.isEmpty) != nil) {
-                    self?.trackName.text = self?.backupText
+            textSpeedTimer?.invalidate()
+            textSpeedTimer = Timer.scheduledTimer(withTimeInterval: 0.35, repeats: true) { [weak self]_ in
+                    DispatchQueue.main.async {
+                        if let text = self?.trackName.text, self?.backupText?.count ?? 0 > 6 {
+                            let index = text.index(after: text.startIndex)
+                            let updateText = String(text[index...])
+                            self?.trackName.text = updateText
+                            if  self?.trackName.text?.count == 1 {
+                                self?.trackName.text = self?.backupText
+                            }
+                        }
                 }
-                if let text = self?.trackName.text, !text.isEmpty {
-                    let index = text.index(after: text.startIndex)
-                    self?.trackName.text = self?.trackName.text?.substring(from: index)
-                }
-            }
         }
     }
     
-    deinit {
-        timer.invalidate()
-    }
 }
