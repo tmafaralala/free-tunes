@@ -7,10 +7,14 @@
 
 import Foundation
 
-typealias FetchMusicResult = Result<TracksModel, Error>
+typealias FetchMusicResult = (Result<TracksModel, Error>) -> Void
 
-class ExploreMusicRepository {
-    func fetchTrendingMusic(completion: @escaping ((FetchMusicResult) -> Void)) {
+protocol MusicRepositoryType: AnyObject {
+    func fetchTrendingMusic(completion: @escaping (FetchMusicResult))
+}
+
+class ExploreMusicRepository: MusicRepositoryType {
+    func fetchTrendingMusic(completion: @escaping (FetchMusicResult)) {
         guard let url = Constants.artistExploreContentUrl else {
             DispatchQueue.main.async {
                 completion(.failure(ApiError.invalidUrl))
