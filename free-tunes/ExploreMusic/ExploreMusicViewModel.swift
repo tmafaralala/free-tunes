@@ -11,7 +11,7 @@ class ExploreMusicViewModel {
     
     private var topTracks: [Track]?
     private weak var delegate: ExploreMusicViewModelDelegate?
-    private var repository: ExploreMusicRepository?
+    private var repository: MusicRepositoryType?
 
     init(repository: ExploreMusicRepository, delegate: ExploreMusicViewModelDelegate) {
         self.repository = repository
