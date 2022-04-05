@@ -12,9 +12,19 @@ class TrackCollectionViewCell: UICollectionViewCell {
 // MARK: - Interface Builder Outlets
     @IBOutlet private weak var trackCover: UIImageView!
     @IBOutlet private weak var artistName: UILabel!
+    @IBOutlet private weak var header: UILabel!
     @IBOutlet private weak var trackName: UILabel!
+    @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet weak var favouritesButton: UIButton!
     private var backupText: String!
     private weak var textSpeedTimer: Timer!
+    
+    @IBAction private func favouritesClick(_ sender: Any) {
+        favouritesButton.tintColor = .red
+    }
+    
+    @IBAction private func shareClick(_ sender: Any) {
+    }
     
     func setupTrackCell(track: Track) {
         guard let albumCoverUrl = URL(string: track.album.cover) else {
@@ -24,7 +34,26 @@ class TrackCollectionViewCell: UICollectionViewCell {
         backupText = track.title
         self.trackCover.loadArtistCover(url: albumCoverUrl)
         self.artistName.text = "@ "+track.artist.name
+        styleCell()
+    }
+    
+    func styleCell() {
         startMovingText()
+        addBottomGradient()
+        addTopGradient()
+        buildCellHeader()
+        favouritesButton.tintColor = .white
+    }
+    
+    func buildCellHeader() {
+        guard let firstColor = UIColor(named: "AppPrimaryColor")?.cgColor else {
+            return
+        }
+        header.buildCustomLabel(labelFirstPart: "free",
+                                firstColor: firstColor,
+                                labelSecondPart: "Tunes",
+                                secondColor: UIColor.white.cgColor,
+                                size: 28)
     }
     
     func startMovingText() {
@@ -41,6 +70,24 @@ class TrackCollectionViewCell: UICollectionViewCell {
                         }
                 }
         }
+    }
+    
+    func addBottomGradient() {
+        let sHeight:CGFloat = 200.0
+        let shadow = UIColor.black.withAlphaComponent(0.45).cgColor
+        let bottomImageGradient = CAGradientLayer()
+        bottomImageGradient.frame = CGRect(x: 0, y: self.bounds.height - sHeight, width: self.bounds.width, height: sHeight)
+        bottomImageGradient.colors = [UIColor.clear.cgColor, shadow]
+        trackCover.layer.insertSublayer(bottomImageGradient, at: 0)
+    }
+    
+    func addTopGradient() {
+        let sHeight:CGFloat = 200.0
+        let shadow = UIColor.black.withAlphaComponent(0.38).cgColor
+        let topImageGradient = CAGradientLayer()
+        topImageGradient.frame = CGRect(x: 0, y: 0, width: self.bounds.width, height: sHeight)
+        topImageGradient.colors = [shadow, UIColor.clear.cgColor]
+        trackCover.layer.insertSublayer(topImageGradient, at: 0)
     }
     
 }

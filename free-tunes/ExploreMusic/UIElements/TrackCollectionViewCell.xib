@@ -3,8 +3,10 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -28,15 +30,29 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fb8-xn-Zn1">
                                         <rect key="frame" x="298" y="89" width="70" height="61"/>
-                                        <color key="backgroundColor" red="0.84640297310000001" green="0.1970950025" blue="0.87281013259999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title=""/>
+                                        <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.right.fill" catalog="system" title="">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                            <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="shareClick:" destination="iNH-9S-BUt" eventType="touchUpInside" id="YRV-JE-JFs"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aoi-SH-eTE">
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aoi-SH-eTE">
                                         <rect key="frame" x="298" y="0.0" width="70" height="61"/>
-                                        <color key="backgroundColor" red="0.84640297310000001" green="0.1970950025" blue="0.87281013259999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title=""/>
+                                        <color key="tintColor" systemColor="tintColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="" image="heart.fill" catalog="system">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
+                                        </state>
+                                        <buttonConfiguration key="configuration" style="plain" image="heart.fill" catalog="system" title="">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="favouritesClick:" destination="iNH-9S-BUt" eventType="touchUpInside" id="phD-K3-7ff"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -58,7 +74,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kabza de small" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjL-r7-S4H">
                                         <rect key="frame" x="0.0" y="32" width="368" height="26.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" name="AppPrimaryColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -78,6 +94,12 @@
                             <constraint firstItem="6cg-bM-7BZ" firstAttribute="leading" secondItem="MIK-df-aDj" secondAttribute="leading" id="zph-hR-eRX"/>
                         </constraints>
                     </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trending" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="63E-Uh-kWs">
+                        <rect key="frame" x="162" y="86.5" width="90" height="29"/>
+                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="24"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="p3m-Wq-EN2"/>
@@ -89,23 +111,36 @@
                 <constraint firstItem="MIK-df-aDj" firstAttribute="centerX" secondItem="iNH-9S-BUt" secondAttribute="centerX" id="JCI-dO-g8n"/>
                 <constraint firstItem="l1m-1g-3Lm" firstAttribute="width" secondItem="XDq-yt-x3R" secondAttribute="width" multiplier="0.888889" id="MDw-6a-4uu"/>
                 <constraint firstItem="XDq-yt-x3R" firstAttribute="bottom" secondItem="MIK-df-aDj" secondAttribute="bottom" multiplier="1.1" id="NAy-4R-nU2"/>
+                <constraint firstItem="l1m-1g-3Lm" firstAttribute="top" secondItem="63E-Uh-kWs" secondAttribute="bottom" multiplier="5" id="NSu-Ny-mX7"/>
                 <constraint firstItem="6cg-bM-7BZ" firstAttribute="height" secondItem="XDq-yt-x3R" secondAttribute="height" multiplier="0.0658482" id="Nhs-cL-1b4"/>
                 <constraint firstAttribute="trailing" secondItem="XDq-yt-x3R" secondAttribute="trailing" id="Qsp-t3-YgS"/>
                 <constraint firstItem="Fb8-xn-Zn1" firstAttribute="width" secondItem="XDq-yt-x3R" secondAttribute="width" multiplier="0.169082" id="S5b-mh-uyM"/>
+                <constraint firstItem="63E-Uh-kWs" firstAttribute="centerX" secondItem="iNH-9S-BUt" secondAttribute="centerX" id="ViX-kW-pEi"/>
                 <constraint firstItem="Fb8-xn-Zn1" firstAttribute="height" secondItem="XDq-yt-x3R" secondAttribute="height" multiplier="0.0680804" id="WDC-HS-jF8"/>
                 <constraint firstItem="MIK-df-aDj" firstAttribute="width" secondItem="XDq-yt-x3R" secondAttribute="width" multiplier="0.888889" id="bMI-3z-yRc"/>
                 <constraint firstItem="Aoi-SH-eTE" firstAttribute="height" secondItem="XDq-yt-x3R" secondAttribute="height" multiplier="0.0680804" id="cL0-kg-IfG"/>
-                <constraint firstItem="MIK-df-aDj" firstAttribute="leading" secondItem="iNH-9S-BUt" secondAttribute="leading" constant="23" id="dhq-MC-1vN"/>
                 <constraint firstItem="Aoi-SH-eTE" firstAttribute="width" secondItem="XDq-yt-x3R" secondAttribute="width" multiplier="0.169082" id="jYY-MC-45i"/>
-                <constraint firstAttribute="trailing" secondItem="MIK-df-aDj" secondAttribute="trailing" constant="23" id="zje-rN-S6S"/>
             </constraints>
             <size key="customSize" width="181" height="354"/>
             <connections>
                 <outlet property="artistName" destination="yjL-r7-S4H" id="GvF-dS-q6L"/>
+                <outlet property="favouritesButton" destination="Aoi-SH-eTE" id="waF-V3-nyF"/>
+                <outlet property="header" destination="63E-Uh-kWs" id="GHy-Lw-3cL"/>
+                <outlet property="shareButton" destination="Fb8-xn-Zn1" id="1pz-8B-vpL"/>
                 <outlet property="trackCover" destination="XDq-yt-x3R" id="LMe-zb-G1P"/>
                 <outlet property="trackName" destination="Vgr-6n-NOH" id="3rV-d9-hT2"/>
             </connections>
             <point key="canvasLocation" x="210.1449275362319" y="198.88392857142856"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
+        <namedColor name="AppPrimaryColor">
+            <color red="0.31799998879432678" green="0.64999997615814209" blue="0.97299998998641968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

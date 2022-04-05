@@ -8,19 +8,14 @@
 import UIKit
 
 extension UILabel {
-    func buildCustomLabel(labelFirstPart: String, labelSecondPart: String) {
+    func buildCustomLabel(labelFirstPart: String, firstColor: CGColor , labelSecondPart: String , secondColor: CGColor,size: CGFloat) {
 
-        guard let primaryColor = UIColor(named: "AppPrimaryColor")?.cgColor,
-        let secondaryColor = UIColor(named: "AppSecondaryColor")?.cgColor else {
-            return
-        }
-
-        let firstStringAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 40),
-                                     NSAttributedString.Key.foregroundColor: primaryColor] as
+        let firstStringAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: size),
+                                     NSAttributedString.Key.foregroundColor: firstColor] as
                                     [NSAttributedString.Key: Any]
 
-        let secondStringAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 40),
-                                      NSAttributedString.Key.foregroundColor: secondaryColor] as
+        let secondStringAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: size),
+                                      NSAttributedString.Key.foregroundColor: secondColor] as
                                     [NSAttributedString.Key: Any]
 
         let firstString = NSMutableAttributedString(string: labelFirstPart,
@@ -32,4 +27,8 @@ extension UILabel {
         firstString.append(secondString)
         self.attributedText = firstString
     }
+    
+    func characterSpacing(spacing: Double) {
+          self.attributedText = NSAttributedString(string: self.text!, attributes:[NSAttributedString.Key.kern: spacing])
+      }
 }
