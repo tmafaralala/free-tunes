@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol ViewModelDelegate: AnyObject {
+protocol ExploreMusicViewModelDelegate: AnyObject {
     func reloadView()
     func show(error: String)
 }

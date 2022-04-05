@@ -7,8 +7,11 @@
 
 import Foundation
 
-struct TrackData: Codable {
-    let tracks: Tracks
+struct TracksModel: Codable {
+    let tracksData: Tracks
+    enum CodingKeys: String, CodingKey {
+        case tracksData = "tracks"
+    }
 }
 
 struct Tracks: Codable {

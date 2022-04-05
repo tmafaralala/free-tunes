@@ -8,21 +8,21 @@
 import UIKit
 import AVFoundation
 
-class TrackExplorerViewController: UIViewController {
+class ExploreMusicViewController: UIViewController {
     
 // MARK: - Interface Builder Outlets
     @IBOutlet private weak var trackCollectionView: UICollectionView!
     
-    private lazy var exploreViewModel = TrackExplorerViewModel()
+    private lazy var exploreViewModel = ExploreMusicViewModel(repository: ExploreMusicRepository(),
+                                                              delegate: self)
     private var looper: AVPlayerLooper!
     private var player: AVQueuePlayer!
 
 // MARK: - Runtime Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        trackCollectionView.register(UINib(nibName: "TrackCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "TrackCollectionViewCell")
-        trackCollectionView.isPagingEnabled = true
-        getExploreViewContent()
+        setUpExploreMusicCollectionView()
+        exploreViewModel.fetchMusicData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,30 +31,17 @@ class TrackExplorerViewController: UIViewController {
     }
     
 // MARK: - Controller Logic Methods
-    func setUpExploreCollectionView() {
+    func setUpExploreMusicCollectionView() {
         trackCollectionView.dataSource = self
         trackCollectionView.delegate = self
-    }
-    
-    func getExploreViewContent() {
-        let url = Constants.artistExploreContentUrl
-        URLSession.shared.makeRequest(url: url, method: .get, returnModel: TrackData.self) {[weak self] result in
-            switch result {
-            case .success(let topTracks):
-                self?.exploreViewModel.storeTracksData(tracks: topTracks.tracks.tracks)
-                DispatchQueue.main.async {
-                    self?.setUpExploreCollectionView()
-                }
-            case .failure(let error):
-                print(error)
-            }
-        }
+        trackCollectionView.register(UINib(nibName: "TrackCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "TrackCollectionViewCell")
+        trackCollectionView.isPagingEnabled = true
     }
 
 }
 
 // MARK: - Collection View Extension
-extension TrackExplorerViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension ExploreMusicViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
 // MARK: - Collection View Setup Methods
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -68,10 +55,10 @@ extension TrackExplorerViewController: UICollectionViewDelegate, UICollectionVie
         else {
             return UICollectionViewCell()
         }
-        
-        cell.setupTrackCell(albumCover: exploreViewModel.getTrack(atIndex: indexPath.item).album.cover,
-                            trackName: exploreViewModel.getTrack(atIndex: indexPath.item).title,
-                            artistName: exploreViewModel.getTrack(atIndex: indexPath.item).artist.name)
+        guard let trendingTrack = exploreViewModel.track(atIndex: indexPath.item) else {
+            return UICollectionViewCell()
+        }
+        cell.setupTrackCell(track: trendingTrack)
         return cell
     }
     
@@ -82,15 +69,13 @@ extension TrackExplorerViewController: UICollectionViewDelegate, UICollectionVie
       return CGSize(width: view.frame.width, height: view.bounds.height)
     }
     
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        trackCollectionView.collectionViewLayout.invalidateLayout()
-    }
-    
 // MARK: - Music Player Extension Methods
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         looper = nil
-        loadRadio(radioURL: exploreViewModel.getTrack(atIndex: indexPath.item).trackLink)
+        guard let trendingTrack = exploreViewModel.track(atIndex: indexPath.item) else {
+            return
+        }
+        loadRadio(radioURL: trendingTrack.trackLink)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -108,5 +93,16 @@ extension TrackExplorerViewController: UICollectionViewDelegate, UICollectionVie
         player = AVQueuePlayer(playerItem: playerItem)
         looper = AVPlayerLooper(player: player, templateItem: playerItem)
         player?.play()
+    }
+}
+
+extension ExploreMusicViewController: ExploreMusicViewModelDelegate {
+    func reloadView() {
+        trackCollectionView.collectionViewLayout.invalidateLayout()
+        trackCollectionView.reloadData()
+    }
+    
+    func show(error: String) {
+        displayErrorAlert(alertTitle: "Data error", alertMessage: error, alertActionTitle: "Ok")
     }
 }

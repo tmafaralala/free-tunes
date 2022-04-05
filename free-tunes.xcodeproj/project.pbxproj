@@ -8,16 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		0B30D31F27D5DE9500A5DD77 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B30D31E27D5DE9500A5DD77 /* UIViewControllerExtension.swift */; };
-		0B5F54BA27CC57D10035FE46 /* TrackExplorerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F54B927CC57D10035FE46 /* TrackExplorerViewController.swift */; };
+		0B5F54BA27CC57D10035FE46 /* ExploreMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F54B927CC57D10035FE46 /* ExploreMusicViewController.swift */; };
+		0B666C8927F1FA7E0000694E /* ExploreMusicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B666C8827F1FA7E0000694E /* ExploreMusicViewModel.swift */; };
+		0B666C8C27F1FCC00000694E /* ExploreMusicRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B666C8B27F1FCC00000694E /* ExploreMusicRepository.swift */; };
+		0B666C8E27F2F1C00000694E /* ServiceErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B666C8D27F2F1C00000694E /* ServiceErrors.swift */; };
+		0B666C9027F2F5A90000694E /* ServiceMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B666C8F27F2F5A90000694E /* ServiceMethods.swift */; };
 		0B7AECD127CCE00E00D23D4A /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7AECD027CCE00E00D23D4A /* OnBoardingViewController.swift */; };
 		0B7AECD327CCE16900D23D4A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7AECD227CCE16900D23D4A /* LoginViewController.swift */; };
 		0B7F87B527EC8C8F00AA778F /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F87B427EC8C8F00AA778F /* LogInViewModel.swift */; };
-		0B7F87B727ECA22100AA778F /* ViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F87B627ECA22100AA778F /* ViewModelDelegate.swift */; };
+		0B7F87B727ECA22100AA778F /* ExploreMusicViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F87B627ECA22100AA778F /* ExploreMusicViewModelDelegate.swift */; };
 		0BA6FD6327CEA17000396D28 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA6FD6227CEA17000396D28 /* UILabelExtension.swift */; };
 		0BA6FD6527CEA1F000396D28 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA6FD6427CEA1F000396D28 /* UITextFieldExtension.swift */; };
 		0BCC8B7F27C8C14000F029D2 /* TracksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B7E27C8C14000F029D2 /* TracksModel.swift */; };
-		0BCC8B8127C8C1C200F029D2 /* TrackExplorerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B8027C8C1C200F029D2 /* TrackExplorerViewModel.swift */; };
-		0BCC8B8627C8C7F000F029D2 /* ApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B8527C8C7F000F029D2 /* ApiCaller.swift */; };
+		0BCC8B8627C8C7F000F029D2 /* URLSessionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B8527C8C7F000F029D2 /* URLSessionExtension.swift */; };
 		0BCC8B8827C8C8BA00F029D2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B8727C8C8BA00F029D2 /* Constants.swift */; };
 		0BCC8B8D27C8CC9C00F029D2 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC8B8C27C8CC9C00F029D2 /* UIImageViewExtension.swift */; };
 		0BE2C39327DE5E95007F3FDD /* TrackCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE2C39127DE5E95007F3FDD /* TrackCollectionViewCell.swift */; };
@@ -52,16 +55,19 @@
 
 /* Begin PBXFileReference section */
 		0B30D31E27D5DE9500A5DD77 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
-		0B5F54B927CC57D10035FE46 /* TrackExplorerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackExplorerViewController.swift; sourceTree = "<group>"; };
+		0B5F54B927CC57D10035FE46 /* ExploreMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreMusicViewController.swift; sourceTree = "<group>"; };
+		0B666C8827F1FA7E0000694E /* ExploreMusicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreMusicViewModel.swift; sourceTree = "<group>"; };
+		0B666C8B27F1FCC00000694E /* ExploreMusicRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreMusicRepository.swift; sourceTree = "<group>"; };
+		0B666C8D27F2F1C00000694E /* ServiceErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceErrors.swift; sourceTree = "<group>"; };
+		0B666C8F27F2F5A90000694E /* ServiceMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceMethods.swift; sourceTree = "<group>"; };
 		0B7AECD027CCE00E00D23D4A /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		0B7AECD227CCE16900D23D4A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0B7F87B427EC8C8F00AA778F /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
-		0B7F87B627ECA22100AA778F /* ViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelDelegate.swift; sourceTree = "<group>"; };
+		0B7F87B627ECA22100AA778F /* ExploreMusicViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreMusicViewModelDelegate.swift; sourceTree = "<group>"; };
 		0BA6FD6227CEA17000396D28 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		0BA6FD6427CEA1F000396D28 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		0BCC8B7E27C8C14000F029D2 /* TracksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksModel.swift; sourceTree = "<group>"; };
-		0BCC8B8027C8C1C200F029D2 /* TrackExplorerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrackExplorerViewModel.swift; path = "free-tunes/ViewModels/TrackExplorerViewModel.swift"; sourceTree = SOURCE_ROOT; };
-		0BCC8B8527C8C7F000F029D2 /* ApiCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCaller.swift; sourceTree = "<group>"; };
+		0BCC8B8527C8C7F000F029D2 /* URLSessionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtension.swift; sourceTree = "<group>"; };
 		0BCC8B8727C8C8BA00F029D2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0BCC8B8C27C8CC9C00F029D2 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		0BE2C39127DE5E95007F3FDD /* TrackCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -106,6 +112,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B666C8627F1F9380000694E /* ExploreMusic */ = {
+			isa = PBXGroup;
+			children = (
+				0B666C8A27F1FC960000694E /* Repository */,
+				0B7F87B627ECA22100AA778F /* ExploreMusicViewModelDelegate.swift */,
+				0B666C8727F1F9CC0000694E /* UIElements */,
+				0B5F54B927CC57D10035FE46 /* ExploreMusicViewController.swift */,
+				0B666C8827F1FA7E0000694E /* ExploreMusicViewModel.swift */,
+			);
+			path = ExploreMusic;
+			sourceTree = "<group>";
+		};
+		0B666C8727F1F9CC0000694E /* UIElements */ = {
+			isa = PBXGroup;
+			children = (
+				0BE2C39227DE5E95007F3FDD /* TrackCollectionViewCell.xib */,
+				0BE2C39127DE5E95007F3FDD /* TrackCollectionViewCell.swift */,
+			);
+			path = UIElements;
+			sourceTree = "<group>";
+		};
+		0B666C8A27F1FC960000694E /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				0BCC8B7E27C8C14000F029D2 /* TracksModel.swift */,
+				0B666C8B27F1FCC00000694E /* ExploreMusicRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		0B666C9327F336540000694E /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				0B7AECD027CCE00E00D23D4A /* OnBoardingViewController.swift */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
 		0B7F87B327EC86AD00AA778F /* LogIn */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +162,7 @@
 		0B8F7A4327DE561A00642F60 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				0BCC8B8527C8C7F000F029D2 /* URLSessionExtension.swift */,
 				0B30D31E27D5DE9500A5DD77 /* UIViewControllerExtension.swift */,
 				0BA6FD6427CEA1F000396D28 /* UITextFieldExtension.swift */,
 				0BA6FD6227CEA17000396D28 /* UILabelExtension.swift */,
@@ -127,13 +172,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		0BCC8B7A27C8BF0F00F029D2 /* Utilities */ = {
+		0BCC8B7A27C8BF0F00F029D2 /* Service Layer */ = {
 			isa = PBXGroup;
 			children = (
-				0BCC8B8527C8C7F000F029D2 /* ApiCaller.swift */,
 				0BCC8B8727C8C8BA00F029D2 /* Constants.swift */,
+				0B666C8D27F2F1C00000694E /* ServiceErrors.swift */,
+				0B666C8F27F2F5A90000694E /* ServiceMethods.swift */,
 			);
-			path = Utilities;
+			path = "Service Layer";
 			sourceTree = "<group>";
 		};
 		0BCC8B7B27C8BF3D00F029D2 /* Config */ = {
@@ -142,17 +188,8 @@
 				0BEAF49327C79F7B00C0590D /* Info.plist */,
 				0BEAF48527C79F7700C0590D /* AppDelegate.swift */,
 				0BEAF48727C79F7700C0590D /* SceneDelegate.swift */,
-				0B7F87B627ECA22100AA778F /* ViewModelDelegate.swift */,
 			);
 			path = Config;
-			sourceTree = "<group>";
-		};
-		0BCC8B8227C8C21E00F029D2 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				0BCC8B8027C8C1C200F029D2 /* TrackExplorerViewModel.swift */,
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		0BEAF47927C79F7700C0590D = {
@@ -180,13 +217,12 @@
 			children = (
 				0B8F7A4327DE561A00642F60 /* Extensions */,
 				0BCC8B7B27C8BF3D00F029D2 /* Config */,
-				0BCC8B7A27C8BF0F00F029D2 /* Utilities */,
+				0BCC8B7A27C8BF0F00F029D2 /* Service Layer */,
 				0BEAF4B927C7A13600C0590D /* Resources */,
 				0BEAF4B827C7A10D00C0590D /* UserInterfaces */,
 				0B7F87B327EC86AD00AA778F /* LogIn */,
-				0BEAF4B727C7A05700C0590D /* Controllers */,
-				0BEAF4B627C7A04E00C0590D /* Models */,
-				0BCC8B8227C8C21E00F029D2 /* ViewModels */,
+				0B666C8627F1F9380000694E /* ExploreMusic */,
+				0B666C9327F336540000694E /* OnBoarding */,
 			);
 			path = "free-tunes";
 			sourceTree = "<group>";
@@ -208,30 +244,11 @@
 			path = "free-tunesUITests";
 			sourceTree = "<group>";
 		};
-		0BEAF4B627C7A04E00C0590D /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				0BCC8B7E27C8C14000F029D2 /* TracksModel.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		0BEAF4B727C7A05700C0590D /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				0BE2C39127DE5E95007F3FDD /* TrackCollectionViewCell.swift */,
-				0B5F54B927CC57D10035FE46 /* TrackExplorerViewController.swift */,
-				0B7AECD027CCE00E00D23D4A /* OnBoardingViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		0BEAF4B827C7A10D00C0590D /* UserInterfaces */ = {
 			isa = PBXGroup;
 			children = (
 				0BEAF48B27C79F7700C0590D /* Main.storyboard */,
 				0BEAF49027C79F7B00C0590D /* LaunchScreen.storyboard */,
-				0BE2C39227DE5E95007F3FDD /* TrackCollectionViewCell.xib */,
 			);
 			path = UserInterfaces;
 			sourceTree = "<group>";
@@ -397,22 +414,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B666C9027F2F5A90000694E /* ServiceMethods.swift in Sources */,
 				0BA6FD6527CEA1F000396D28 /* UITextFieldExtension.swift in Sources */,
 				0B7AECD327CCE16900D23D4A /* LoginViewController.swift in Sources */,
 				0BCC8B7F27C8C14000F029D2 /* TracksModel.swift in Sources */,
-				0B5F54BA27CC57D10035FE46 /* TrackExplorerViewController.swift in Sources */,
-				0BCC8B8627C8C7F000F029D2 /* ApiCaller.swift in Sources */,
-				0BCC8B8127C8C1C200F029D2 /* TrackExplorerViewModel.swift in Sources */,
+				0B5F54BA27CC57D10035FE46 /* ExploreMusicViewController.swift in Sources */,
+				0BCC8B8627C8C7F000F029D2 /* URLSessionExtension.swift in Sources */,
+				0B666C8927F1FA7E0000694E /* ExploreMusicViewModel.swift in Sources */,
 				0BEAF48627C79F7700C0590D /* AppDelegate.swift in Sources */,
 				0BEAF48827C79F7700C0590D /* SceneDelegate.swift in Sources */,
 				0BA6FD6327CEA17000396D28 /* UILabelExtension.swift in Sources */,
 				0BE2C39827DF3BAA007F3FDD /* LogInViewControllerExtension.swift in Sources */,
 				0BCC8B8827C8C8BA00F029D2 /* Constants.swift in Sources */,
 				0B30D31F27D5DE9500A5DD77 /* UIViewControllerExtension.swift in Sources */,
-				0B7F87B727ECA22100AA778F /* ViewModelDelegate.swift in Sources */,
+				0B7F87B727ECA22100AA778F /* ExploreMusicViewModelDelegate.swift in Sources */,
 				0BCC8B8D27C8CC9C00F029D2 /* UIImageViewExtension.swift in Sources */,
 				0BE2C39327DE5E95007F3FDD /* TrackCollectionViewCell.swift in Sources */,
+				0B666C8E27F2F1C00000694E /* ServiceErrors.swift in Sources */,
 				0B7AECD127CCE00E00D23D4A /* OnBoardingViewController.swift in Sources */,
+				0B666C8C27F1FCC00000694E /* ExploreMusicRepository.swift in Sources */,
 				0B7F87B527EC8C8F00AA778F /* LogInViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,12 +14,12 @@ class TrackCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var artistName: UILabel!
     @IBOutlet private weak var trackName: UILabel!
     
-    func setupTrackCell(albumCover: String, trackName: String, artistName: String) {
-        guard let albumCoverUrl = URL(string: albumCover) else {
+    func setupTrackCell(track: Track) {
+        guard let albumCoverUrl = URL(string: track.album.cover) else {
             return
         }
-        self.trackName.text = trackName
+        self.trackName.text = track.title
         self.trackCover.loadArtistCover(url: albumCoverUrl)
-        self.artistName.text = artistName
+        self.artistName.text = track.artist.name
     }
 }
