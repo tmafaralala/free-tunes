@@ -14,17 +14,8 @@ class TrackCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var artistName: UILabel!
     @IBOutlet private weak var header: UILabel!
     @IBOutlet private weak var trackName: UILabel!
-    @IBOutlet weak var shareButton: UIButton!
-    @IBOutlet weak var favouritesButton: UIButton!
     private var backupText: String!
     private weak var textSpeedTimer: Timer!
-    
-    @IBAction private func favouritesClick(_ sender: Any) {
-        favouritesButton.tintColor = .red
-    }
-    
-    @IBAction private func shareClick(_ sender: Any) {
-    }
     
     func setupTrackCell(track: Track) {
         guard let albumCoverUrl = URL(string: track.album.cover) else {
@@ -42,7 +33,6 @@ class TrackCollectionViewCell: UICollectionViewCell {
         addBottomGradient()
         addTopGradient()
         buildCellHeader()
-        favouritesButton.tintColor = .white
     }
     
     func buildCellHeader() {

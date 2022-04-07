@@ -35,9 +35,6 @@
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
                                             <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
-                                        <connections>
-                                            <action selector="shareClick:" destination="iNH-9S-BUt" eventType="touchUpInside" id="YRV-JE-JFs"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aoi-SH-eTE">
                                         <rect key="frame" x="298" y="0.0" width="70" height="61"/>
@@ -50,9 +47,6 @@
                                         <buttonConfiguration key="configuration" style="plain" image="heart.fill" catalog="system" title="">
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
                                         </buttonConfiguration>
-                                        <connections>
-                                            <action selector="favouritesClick:" destination="iNH-9S-BUt" eventType="touchUpInside" id="phD-K3-7ff"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -124,9 +118,7 @@
             <size key="customSize" width="181" height="354"/>
             <connections>
                 <outlet property="artistName" destination="yjL-r7-S4H" id="GvF-dS-q6L"/>
-                <outlet property="favouritesButton" destination="Aoi-SH-eTE" id="waF-V3-nyF"/>
                 <outlet property="header" destination="63E-Uh-kWs" id="GHy-Lw-3cL"/>
-                <outlet property="shareButton" destination="Fb8-xn-Zn1" id="1pz-8B-vpL"/>
                 <outlet property="trackCover" destination="XDq-yt-x3R" id="LMe-zb-G1P"/>
                 <outlet property="trackName" destination="Vgr-6n-NOH" id="3rV-d9-hT2"/>
             </connections>
