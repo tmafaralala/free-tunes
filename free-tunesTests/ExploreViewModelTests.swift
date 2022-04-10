@@ -10,5 +10,7 @@ import XCTest
 @testable import free_tunes
 
 class ExploreMusicViewModel_tests: XCTestCase {
-  
+    override func setUp() {
+        super.setUp()
+    }
 }
