@@ -36,11 +36,8 @@ class TrackCollectionViewCell: UICollectionViewCell {
     }
     
    private func buildCellHeader() {
-        guard let firstColor = UIColor(named: "AppPrimaryColor")?.cgColor else {
-            return
-        }
         header.buildCustomLabel(labelFirstPart: "free",
-                                firstColor: firstColor,
+                                firstColor: UIColor.primaryColor.cgColor,
                                 labelSecondPart: "Tunes",
                                 secondColor: UIColor.white.cgColor,
                                 size: 28)

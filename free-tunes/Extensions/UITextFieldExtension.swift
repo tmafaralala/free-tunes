@@ -33,7 +33,7 @@ extension UITextField {
     }
 
     func applyPrimaryColorOutline() {
-        self.layer.borderColor = UIColor(named: "AppPrimaryColor")?.cgColor
+        self.layer.borderColor = UIColor.primaryColor.cgColor
     }
     
     var isEmpty: Bool {

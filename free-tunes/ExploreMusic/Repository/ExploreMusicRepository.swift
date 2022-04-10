@@ -21,6 +21,9 @@ class ExploreMusicRepository: MusicRepositoryType {
             }
             return
         }
-        URLSession.shared.makeRequest(url: url, method: .get, returnModel: TracksModel.self, completion: completion)
+        URLSession.shared.makeRequest(url: url,
+                                      method: .get,
+                                      returnModel: TracksModel.self,
+                                      completion: completion)
     }
 }

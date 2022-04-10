@@ -8,7 +8,11 @@
 import UIKit
 
 extension UILabel {
-    func buildCustomLabel(labelFirstPart: String, firstColor: CGColor , labelSecondPart: String , secondColor: CGColor,size: CGFloat) {
+    func buildCustomLabel(labelFirstPart: String,
+                          firstColor: CGColor ,
+                          labelSecondPart: String ,
+                          secondColor: CGColor,
+                          size: CGFloat) {
 
         let firstStringAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: size),
                                      NSAttributedString.Key.foregroundColor: firstColor] as
@@ -29,6 +33,10 @@ extension UILabel {
     }
     
     func characterSpacing(spacing: Double) {
-          self.attributedText = NSAttributedString(string: self.text!, attributes:[NSAttributedString.Key.kern: spacing])
+        guard let text = self.text else {
+            return
+        }
+        self.attributedText = NSAttributedString(string: text,
+                                                 attributes:[NSAttributedString.Key.kern: spacing])
       }
 }
