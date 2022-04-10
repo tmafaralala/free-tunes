@@ -28,14 +28,14 @@ class TrackCollectionViewCell: UICollectionViewCell {
         styleCell()
     }
     
-    func styleCell() {
+    private func styleCell() {
         startMovingText()
         addBottomGradient()
         addTopGradient()
         buildCellHeader()
     }
     
-    func buildCellHeader() {
+   private func buildCellHeader() {
         guard let firstColor = UIColor(named: "AppPrimaryColor")?.cgColor else {
             return
         }
@@ -46,7 +46,7 @@ class TrackCollectionViewCell: UICollectionViewCell {
                                 size: 28)
     }
     
-    func startMovingText() {
+    private func startMovingText() {
             textSpeedTimer?.invalidate()
             textSpeedTimer = Timer.scheduledTimer(withTimeInterval: 0.35, repeats: true) { [weak self]_ in
                     DispatchQueue.main.async {
@@ -62,7 +62,7 @@ class TrackCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    func addBottomGradient() {
+    private func addBottomGradient() {
         let sHeight:CGFloat = 200.0
         let shadow = UIColor.black.withAlphaComponent(0.45).cgColor
         let bottomImageGradient = CAGradientLayer()
@@ -71,7 +71,7 @@ class TrackCollectionViewCell: UICollectionViewCell {
         trackCover.layer.insertSublayer(bottomImageGradient, at: 0)
     }
     
-    func addTopGradient() {
+    private func addTopGradient() {
         let sHeight:CGFloat = 200.0
         let shadow = UIColor.black.withAlphaComponent(0.38).cgColor
         let topImageGradient = CAGradientLayer()
