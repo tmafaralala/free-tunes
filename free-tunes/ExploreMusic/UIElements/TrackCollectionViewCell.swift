@@ -18,13 +18,13 @@ class TrackCollectionViewCell: UICollectionViewCell {
     private weak var textSpeedTimer: Timer!
     
     func setupTrackCell(track: Track) {
-        guard let albumCoverUrl = URL(string: track.album.cover) else {
+        guard let albumCoverUrl = URL(string: track.cover) else {
             return
         }
         self.trackName.text = track.title
         backupText = track.title
         self.trackCover.loadArtistCover(url: albumCoverUrl)
-        self.artistName.text = "@ "+track.artist.name
+        self.artistName.text = "@ "+track.artistName
         styleCell()
     }
     

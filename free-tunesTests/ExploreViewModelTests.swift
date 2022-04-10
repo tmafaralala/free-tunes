@@ -9,6 +9,6 @@ import XCTest
 
 @testable import free_tunes
 
-class FreeTunesTests: XCTestCase {
-
+class ExploreMusicViewModel_tests: XCTestCase {
+  
 }

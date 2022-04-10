@@ -22,16 +22,21 @@ struct Tracks: Codable {
 }
 
 struct Track: Codable {
-    let title: String
-    let artist: Artist
-    let album: Album
-    let trackLink: String
+    private let trackTitle: String
+    private let trackArtist: Artist
+    private let trackAlbum: Album
+    private let previewLink: String
     enum CodingKeys: String, CodingKey {
-        case title
-        case artist
-        case album
-        case trackLink = "preview"
+        case trackTitle
+        case trackArtist
+        case trackAlbum
+        case previewLink = "preview"
     }
+    
+    var trackLink: String {get {return previewLink}}
+    var title: String {get {return trackTitle}}
+    var artistName: String {get {return trackArtist.name}}
+    var cover: String {get {return trackAlbum.cover}}
 }
 
 struct Album: Codable {
