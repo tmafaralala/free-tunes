@@ -31,18 +31,7 @@
 		0BEAF48D27C79F7700C0590D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BEAF48B27C79F7700C0590D /* Main.storyboard */; };
 		0BEAF48F27C79F7B00C0590D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BEAF48E27C79F7B00C0590D /* Assets.xcassets */; };
 		0BEAF49227C79F7B00C0590D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BEAF49027C79F7B00C0590D /* LaunchScreen.storyboard */; };
-		0BEAF49D27C79F7C00C0590D /* ExploreViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEAF49C27C79F7C00C0590D /* ExploreViewModelTests.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		0BEAF49927C79F7C00C0590D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0BEAF47A27C79F7700C0590D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0BEAF48127C79F7700C0590D;
-			remoteInfo = "free-tunes";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0B30D31E27D5DE9500A5DD77 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
@@ -71,19 +60,10 @@
 		0BEAF48E27C79F7B00C0590D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/../../../../../../../../../Users/tmafaralala/free-tunes/free-tunes/Resources/Assets.xcassets"; sourceTree = "<absolute>"; };
 		0BEAF49127C79F7B00C0590D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0BEAF49327C79F7B00C0590D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0BEAF49827C79F7C00C0590D /* free-tunesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "free-tunesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0BEAF49C27C79F7C00C0590D /* ExploreViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0BEAF47F27C79F7700C0590D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0BEAF49527C79F7C00C0590D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -177,7 +157,6 @@
 			isa = PBXGroup;
 			children = (
 				0BEAF48427C79F7700C0590D /* free-tunes */,
-				0BEAF49B27C79F7C00C0590D /* free-tunesTests */,
 				0BEAF48327C79F7700C0590D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -186,7 +165,6 @@
 			isa = PBXGroup;
 			children = (
 				0BEAF48227C79F7700C0590D /* free-tunes.app */,
-				0BEAF49827C79F7C00C0590D /* free-tunesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -204,14 +182,6 @@
 				0B666C9327F336540000694E /* OnBoarding */,
 			);
 			path = "free-tunes";
-			sourceTree = "<group>";
-		};
-		0BEAF49B27C79F7C00C0590D /* free-tunesTests */ = {
-			isa = PBXGroup;
-			children = (
-				0BEAF49C27C79F7C00C0590D /* ExploreViewModelTests.swift */,
-			);
-			path = "free-tunesTests";
 			sourceTree = "<group>";
 		};
 		0BEAF4B827C7A10D00C0590D /* UserInterfaces */ = {
@@ -252,24 +222,6 @@
 			productReference = 0BEAF48227C79F7700C0590D /* free-tunes.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0BEAF49727C79F7C00C0590D /* free-tunesTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0BEAF4AF27C79F7C00C0590D /* Build configuration list for PBXNativeTarget "free-tunesTests" */;
-			buildPhases = (
-				0BEAF49427C79F7C00C0590D /* Sources */,
-				0BEAF49527C79F7C00C0590D /* Frameworks */,
-				0BEAF49627C79F7C00C0590D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0BEAF49A27C79F7C00C0590D /* PBXTargetDependency */,
-			);
-			name = "free-tunesTests";
-			productName = "free-tunesTests";
-			productReference = 0BEAF49827C79F7C00C0590D /* free-tunesTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -277,15 +229,11 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1320;
+				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					0BEAF48127C79F7700C0590D = {
 						CreatedOnToolsVersion = 13.2.1;
-					};
-					0BEAF49727C79F7C00C0590D = {
-						CreatedOnToolsVersion = 13.2.1;
-						TestTargetID = 0BEAF48127C79F7700C0590D;
 					};
 				};
 			};
@@ -303,7 +251,6 @@
 			projectRoot = "";
 			targets = (
 				0BEAF48127C79F7700C0590D /* free-tunes */,
-				0BEAF49727C79F7C00C0590D /* free-tunesTests */,
 			);
 		};
 /* End PBXProject section */
@@ -317,13 +264,6 @@
 				0BEAF49227C79F7B00C0590D /* LaunchScreen.storyboard in Resources */,
 				0BEAF48F27C79F7B00C0590D /* Assets.xcassets in Resources */,
 				0BEAF48D27C79F7700C0590D /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0BEAF49627C79F7C00C0590D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,23 +317,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0BEAF49427C79F7C00C0590D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0BEAF49D27C79F7C00C0590D /* ExploreViewModelTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		0BEAF49A27C79F7C00C0590D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0BEAF48127C79F7700C0590D /* free-tunes */;
-			targetProxy = 0BEAF49927C79F7C00C0590D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0BEAF48B27C79F7700C0590D /* Main.storyboard */ = {
@@ -595,48 +519,6 @@
 			};
 			name = Release;
 		};
-		0BEAF4B027C79F7C00C0590D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = "";
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_CXX_LIBRARY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dvt.free-tunesTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/free-tunes.app/free-tunes";
-			};
-			name = Debug;
-		};
-		0BEAF4B127C79F7C00C0590D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = "";
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_CXX_LIBRARY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dvt.free-tunesTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/free-tunes.app/free-tunes";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -654,15 +536,6 @@
 			buildConfigurations = (
 				0BEAF4AD27C79F7C00C0590D /* Debug */,
 				0BEAF4AE27C79F7C00C0590D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0BEAF4AF27C79F7C00C0590D /* Build configuration list for PBXNativeTarget "free-tunesTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0BEAF4B027C79F7C00C0590D /* Debug */,
-				0BEAF4B127C79F7C00C0590D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
