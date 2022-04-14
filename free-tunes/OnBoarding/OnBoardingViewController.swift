@@ -15,7 +15,11 @@ class OnBoardingViewController: UIViewController {
 // MARK: - Runtime Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        headerText.buildCustomLabel(labelFirstPart: "free", labelSecondPart: "Tunes")
+        headerText.buildCustomLabel(labelFirstPart: "free",
+                                    firstColor: UIColor.primaryColor.cgColor,
+                                    labelSecondPart: "Tunes",
+                                    secondColor: UIColor.secondaryyColor.cgColor,
+                                    size: 40)
     }
 
     override func viewWillAppear(_ animated: Bool) {

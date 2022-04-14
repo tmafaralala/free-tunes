@@ -34,7 +34,9 @@ class ExploreMusicViewController: UIViewController {
     func setUpExploreMusicCollectionView() {
         trackCollectionView.dataSource = self
         trackCollectionView.delegate = self
-        trackCollectionView.register(UINib(nibName: "TrackCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "TrackCollectionViewCell")
+        trackCollectionView.register(UINib(nibName: "TrackCollectionViewCell",
+                                           bundle: .main),
+                                     forCellWithReuseIdentifier: "TrackCollectionViewCell")
         trackCollectionView.isPagingEnabled = true
     }
 
@@ -50,7 +52,8 @@ extension ExploreMusicViewController: UICollectionViewDelegate, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) ->
     UICollectionViewCell {
-        guard let cell = trackCollectionView.dequeueReusableCell(withReuseIdentifier: "TrackCollectionViewCell", for: indexPath)
+        guard let cell = trackCollectionView.dequeueReusableCell(withReuseIdentifier: "TrackCollectionViewCell",
+                                                                 for: indexPath)
                 as? TrackCollectionViewCell
         else {
             return UICollectionViewCell()
@@ -103,6 +106,8 @@ extension ExploreMusicViewController: ExploreMusicViewModelDelegate {
     }
     
     func show(error: String) {
-        displayErrorAlert(alertTitle: "Data error", alertMessage: error, alertActionTitle: "Ok")
+        displayErrorAlert(alertTitle: "Data error",
+                          alertMessage: error,
+                          alertActionTitle: "Ok")
     }
 }

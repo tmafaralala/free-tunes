@@ -24,12 +24,12 @@ struct Tracks: Codable {
 struct Track: Codable {
     let title: String
     let artist: Artist
-    let album: Album
+    let trackAlbum: Album
     let trackLink: String
     enum CodingKeys: String, CodingKey {
         case title
         case artist
-        case album
+        case trackAlbum
         case trackLink = "preview"
     }
 }

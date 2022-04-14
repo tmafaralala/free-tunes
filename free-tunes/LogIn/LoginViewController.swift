@@ -19,7 +19,10 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupInputFields()
-        headerText.buildCustomLabel(labelFirstPart: "free", labelSecondPart: "Tunes")
+        headerText.buildCustomLabel(labelFirstPart: "free",
+                                    firstColor: UIColor.primaryColor.cgColor,
+                                    labelSecondPart: "Tunes",
+                                    secondColor: UIColor.secondaryyColor.cgColor, size: 40)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -44,7 +47,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction private func logIn(_ sender: Any) {
-        viewModel.login(username: usernameInput?.text ?? "", password: passwordInput?.text ?? "")
+        viewModel.login(username: usernameInput?.text ?? "",
+                        password: passwordInput?.text ?? "")
     }
 }
 
@@ -56,7 +60,8 @@ extension LoginViewController: LogInViewModelDelegate {
     }
     
     func navigateToNext() {
-        performSegue(withIdentifier: "NavigateHome", sender: self)
+        performSegue(withIdentifier: "NavigateHome",
+                     sender: self)
     }
     
     func show(error: String) {
