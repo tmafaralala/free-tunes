@@ -10,10 +10,10 @@ import Foundation
 class ExploreMusicViewModel {
     
     private var topTracks: [Track]?
-    private weak var delegate: ExploreMusicViewModelDelegate?
+    private weak var delegate: ViewModelDelegateType?
     private var repository: MusicRepositoryType?
 
-    init(repository: MusicRepositoryType, delegate: ExploreMusicViewModelDelegate) {
+    init(repository: MusicRepositoryType, delegate: ViewModelDelegateType) {
         self.repository = repository
         self.delegate = delegate
     }

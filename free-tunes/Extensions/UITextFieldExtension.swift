@@ -9,6 +9,10 @@ import UIKit
 
 extension UITextField {
 
+    var isEmpty: Bool {
+        return text?.isEmpty ?? true
+    }
+    
     func emptyFieldError() {
         guard let name = self.layer.name else {
             return
@@ -34,9 +38,5 @@ extension UITextField {
 
     func applyPrimaryColorOutline() {
         self.layer.borderColor = UIColor.primaryColor.cgColor
-    }
-    
-    var isEmpty: Bool {
-        return text?.isEmpty ?? true
     }
 }

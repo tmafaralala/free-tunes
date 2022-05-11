@@ -99,7 +99,7 @@ extension ExploreMusicViewController: UICollectionViewDelegate, UICollectionView
     }
 }
 
-extension ExploreMusicViewController: ExploreMusicViewModelDelegate {
+extension ExploreMusicViewController: ViewModelDelegateType {
     func reloadView() {
         trackCollectionView.collectionViewLayout.invalidateLayout()
         trackCollectionView.reloadData()
