@@ -21,8 +21,8 @@ class ExploreMusicViewController: UIViewController {
 // MARK: - Runtime Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpExploreMusicCollectionView()
         exploreViewModel.fetchMusicData()
+        setUpExploreMusicCollectionView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
