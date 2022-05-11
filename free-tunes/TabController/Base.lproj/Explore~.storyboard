@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gM5-Sr-Guk">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Mr3-bR-JFq">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8QY-Kl-ada" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tabBarController id="gM5-Sr-Guk" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="200-m6-z4l">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="gm9-FG-Xah" kind="relationship" relationship="viewControllers" id="CKM-jE-lNr"/>
+                    </connections>
+                </tabBarController>
+            </objects>
+            <point key="canvasLocation" x="1877" y="-609"/>
+        </scene>
+        <!--Explore-->
+        <scene sceneID="f7q-hD-Hcx">
+            <objects>
+                <viewController id="gm9-FG-Xah" customClass="ExploreMusicViewController" customModule="free_tunes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fz0-wC-mQe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bbN-wq-zvJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="5z9-5v-Gzx">
+                                    <size key="itemSize" width="363" height="898"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ln7-bc-FiI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bbN-wq-zvJ" firstAttribute="top" secondItem="fz0-wC-mQe" secondAttribute="top" id="1mS-y9-2I1"/>
+                            <constraint firstAttribute="trailing" secondItem="bbN-wq-zvJ" secondAttribute="trailing" id="8dT-IZ-nsp"/>
+                            <constraint firstAttribute="bottom" secondItem="bbN-wq-zvJ" secondAttribute="bottom" id="9zu-8L-ec2"/>
+                            <constraint firstItem="bbN-wq-zvJ" firstAttribute="trailing" secondItem="Ln7-bc-FiI" secondAttribute="trailing" id="Hf7-Jk-7oH"/>
+                            <constraint firstItem="bbN-wq-zvJ" firstAttribute="leading" secondItem="fz0-wC-mQe" secondAttribute="leading" id="myx-5N-Faq"/>
+                            <constraint firstItem="bbN-wq-zvJ" firstAttribute="leading" secondItem="Ln7-bc-FiI" secondAttribute="leading" id="uOX-4b-V5W"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Hf7-Jk-7oH"/>
+                                <exclude reference="uOX-4b-V5W"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="Hf7-Jk-7oH"/>
+                                <include reference="uOX-4b-V5W"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Explore" image="music.note" catalog="system" selectedImage="music.note" id="rPb-Dc-wxN"/>
+                    <navigationItem key="navigationItem" id="B2p-nK-VAD"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="trackCollectionView" destination="bbN-wq-zvJ" id="89X-Hk-YyY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bLh-bj-0V9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1877" y="157"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="music.note" catalog="system" width="97" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
