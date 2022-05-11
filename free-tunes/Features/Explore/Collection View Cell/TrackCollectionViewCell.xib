@@ -23,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MIK-df-aDj">
-                        <rect key="frame" x="23" y="577.5" width="368" height="237"/>
+                        <rect key="frame" x="23" y="542" width="368" height="237"/>
                         <subviews>
                             <view contentMode="right" semanticContentAttribute="forceLeftToRight" translatesAutoresizingMaskIntoConstraints="NO" id="l1m-1g-3Lm">
                                 <rect key="frame" x="0.0" y="0.0" width="368" height="170"/>
@@ -89,7 +89,7 @@
                         </constraints>
                     </stackView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trending" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="63E-Uh-kWs">
-                        <rect key="frame" x="162" y="86.5" width="90" height="29"/>
+                        <rect key="frame" x="162" y="79.5" width="90" height="29"/>
                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="24"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -104,7 +104,7 @@
                 <constraint firstAttribute="bottom" secondItem="XDq-yt-x3R" secondAttribute="bottom" id="F8j-aH-FJE"/>
                 <constraint firstItem="MIK-df-aDj" firstAttribute="centerX" secondItem="iNH-9S-BUt" secondAttribute="centerX" id="JCI-dO-g8n"/>
                 <constraint firstItem="l1m-1g-3Lm" firstAttribute="width" secondItem="XDq-yt-x3R" secondAttribute="width" multiplier="0.888889" id="MDw-6a-4uu"/>
-                <constraint firstItem="XDq-yt-x3R" firstAttribute="bottom" secondItem="MIK-df-aDj" secondAttribute="bottom" multiplier="1.1" id="NAy-4R-nU2"/>
+                <constraint firstItem="XDq-yt-x3R" firstAttribute="bottom" secondItem="MIK-df-aDj" secondAttribute="bottom" multiplier="1.15" id="NAy-4R-nU2"/>
                 <constraint firstItem="l1m-1g-3Lm" firstAttribute="top" secondItem="63E-Uh-kWs" secondAttribute="bottom" multiplier="5" id="NSu-Ny-mX7"/>
                 <constraint firstItem="6cg-bM-7BZ" firstAttribute="height" secondItem="XDq-yt-x3R" secondAttribute="height" multiplier="0.0658482" id="Nhs-cL-1b4"/>
                 <constraint firstAttribute="trailing" secondItem="XDq-yt-x3R" secondAttribute="trailing" id="Qsp-t3-YgS"/>
