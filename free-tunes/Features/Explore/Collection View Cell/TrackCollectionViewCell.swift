@@ -30,7 +30,6 @@ class TrackCollectionViewCell: UICollectionViewCell {
     
     private func styleCell() {
         startMovingText()
-        addBottomGradient()
         addTopGradient()
         buildCellHeader()
     }
@@ -57,15 +56,6 @@ class TrackCollectionViewCell: UICollectionViewCell {
                         }
                 }
         }
-    }
-    
-    private func addBottomGradient() {
-        let sHeight:CGFloat = 200.0
-        let shadow = UIColor.black.withAlphaComponent(0.45).cgColor
-        let bottomImageGradient = CAGradientLayer()
-        bottomImageGradient.frame = CGRect(x: 0, y: self.bounds.height - sHeight, width: self.bounds.width, height: sHeight)
-        bottomImageGradient.colors = [UIColor.clear.cgColor, shadow]
-        trackCover.layer.insertSublayer(bottomImageGradient, at: 0)
     }
     
     private func addTopGradient() {

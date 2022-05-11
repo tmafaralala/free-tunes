@@ -27,7 +27,7 @@ extension UITextField {
     }
 
     func applyDefaultStyle(withName: String?) {
-        self.layer.borderColor = (UIColor.lightGray).cgColor
+        self.layer.borderColor = (UIColor.systemGray).cgColor
         self.layer.masksToBounds = true
         self.layer.borderWidth = 1.5
         self.layer.cornerRadius = 8
