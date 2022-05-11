@@ -29,7 +29,7 @@ struct Track: Codable {
     enum CodingKeys: String, CodingKey {
         case title
         case artist
-        case trackAlbum
+        case trackAlbum = "album"
         case trackLink = "preview"
     }
 }

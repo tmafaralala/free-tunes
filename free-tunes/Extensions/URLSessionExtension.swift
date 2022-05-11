@@ -57,7 +57,7 @@ extension URLSession {
                                                   httpMethod: method,
                                                   bodyParamaters: paramters,
                                                   serializedBody: knownBody)
-
+                
                 let apiTask = self.dataTask(with: urlRequest) { data, _, error in
                     guard let safeData = data else {
                         if let error = error {

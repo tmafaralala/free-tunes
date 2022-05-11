@@ -21,8 +21,8 @@ class ExploreMusicViewController: UIViewController {
 // MARK: - Runtime Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpExploreMusicCollectionView()
         exploreViewModel.fetchMusicData()
+        setUpExploreMusicCollectionView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -99,7 +99,7 @@ extension ExploreMusicViewController: UICollectionViewDelegate, UICollectionView
     }
 }
 
-extension ExploreMusicViewController: ExploreMusicViewModelDelegate {
+extension ExploreMusicViewController: ViewModelDelegateType {
     func reloadView() {
         trackCollectionView.collectionViewLayout.invalidateLayout()
         trackCollectionView.reloadData()

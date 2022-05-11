@@ -60,7 +60,7 @@ extension LoginViewController: LogInViewModelDelegate {
     }
     
     func navigateToNext() {
-        performSegue(withIdentifier: "NavigateHome",
+        performSegue(withIdentifier: "Explore",
                      sender: self)
     }
     
@@ -68,5 +68,15 @@ extension LoginViewController: LogInViewModelDelegate {
         displayErrorAlert(alertTitle: "Invalid credentials.",
                           alertMessage: error,
                           alertActionTitle: "Try again")
+    }
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.applyPrimaryColorOutline()
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.applyDefaultStyle(withName: nil)
     }
 }
